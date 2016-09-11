@@ -12,7 +12,8 @@ class MenuState extends FlxState
 	var _playButton:FlxButton;
 	override public function create():Void
 	{
-		//add(new FlxText(10,10,100,"Hello, world!"));
+		//testing I placed hello world back
+		add(new FlxText(10,10,100,"Hello, world!"));
 		_playButton = new FlxButton(0, 0, "Play", clickPlay);
 		_playButton.screenCenter();
 		add(_playButton);
