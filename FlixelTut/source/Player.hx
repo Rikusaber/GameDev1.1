@@ -17,6 +17,8 @@
 	 var _down:Bool = false;
 	 var _left:Bool = false;
 	 var _right:Bool = false;
+	 var courage:Int = 0;
+	 
 	 
 	 var _score:Float = 0; //Variable to keep track of the score the player accumulates
 	 
@@ -24,11 +26,20 @@
      {
          super(X, Y, SimpleGraphic);
 		 //makeGraphic(16, 16, FlxColor.GREEN);
+<<<<<<< HEAD
 		 loadGraphic("assets/images/duck.png", true, 100, 114); //Asset name, Animated Bool, Width, Height
 		 //setFacingFlip(direction,flipx,flipy
+=======
+		 loadGraphic("assets/images/duck.png", true, 100, 114);
+		 //setFacingFlip(direction,flipx,flipy)
+>>>>>>> origin/Rikusaber-tutorial-patch-1
 		 setFacingFlip(FlxObject.LEFT, true, false);
 		 setFacingFlip(FlxObject.RIGHT, false, false);
 		 animation.add("walk", [0, 1, 0, 2], 5, true);
+		 
+		 loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
+		 animation.add("idle", [0, 1, 2, 3, 4], 5, true);
+		 
 		 
 		 drag.x = drag.y = 1600;
      }
@@ -86,9 +97,12 @@
 			velocity.rotate(new FlxPoint(0, 0), _rot);
 		 }
 		 if (velocity.x != 0 || velocity.y != 0){
-			 animation.play("walk");
+			animation.play("walk");
 		 }
-		 else {animation.stop;}
+		 else {
+			
+			animation.play("idle");
+		 }
 		 
 		// velocity.set(100, 0);
 		//velocity.set(speed, 0);
