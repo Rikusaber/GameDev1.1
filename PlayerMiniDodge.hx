@@ -84,11 +84,16 @@
    function bound():Void 
    {
      //bind the player from leaving the screen
-     if (!inWorldBounds()) 
+     //if out of bounds, move player to opposite side of screen
+     //left side of screen
+     if ( x > FlxG.width ) 
      {
-          
-          setPosition((FlxG.width/2), FlxG.height-100);
+          setPosition(0, FlxG.height - 100);
      }
-
+     //right side of screen
+     else if ( x < 0 )
+     {
+          setPosition(FlxG.width, FlxG.height - 100);
+     }
    }
  }
