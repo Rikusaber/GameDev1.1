@@ -26,13 +26,10 @@
      {
          super(X, Y, SimpleGraphic);
 		 //makeGraphic(16, 16, FlxColor.GREEN);
-<<<<<<< HEAD
 		 loadGraphic("assets/images/duck.png", true, 100, 114); //Asset name, Animated Bool, Width, Height
 		 //setFacingFlip(direction,flipx,flipy
-=======
 		 loadGraphic("assets/images/duck.png", true, 100, 114);
 		 //setFacingFlip(direction,flipx,flipy)
->>>>>>> origin/Rikusaber-tutorial-patch-1
 		 setFacingFlip(FlxObject.LEFT, true, false);
 		 setFacingFlip(FlxObject.RIGHT, false, false);
 		 animation.add("walk", [0, 1, 0, 2], 5, true);
