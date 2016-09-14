@@ -18,8 +18,6 @@
 	 var _left:Bool = false;
 	 var _right:Bool = false;
 	 
-	 var _score:Float = 0; //Variable to keep track of the score the player accumulates
-	 
      public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
      {
          super(X, Y, SimpleGraphic);
@@ -36,15 +34,6 @@
 	 override public function update(elapsed:Float):Void
 	 {
 		 movement();
-		 //Interaction "range" should be one "tile" length up, down, left, or right
-		 if (FlxG.keys.justPressed.SPACE ) //If the Spacebar is pressed and the player is in range of an object they can interact with (denote with a member variable)
-			{
-				//NEED TO ADD CONDITION FOR OBJECT IN RANGE
-				//isTouching(Direction:Int):Bool function checks if something is touched in the given direction and returns true/false
-				//Directions here are LEFT, RIGHT, UP, and DOWN
-				interact ();
-			} 
-		
 		 super.update(elapsed);
 	 }
 	 function movement():Void
@@ -92,11 +81,5 @@
 		 
 		// velocity.set(100, 0);
 		//velocity.set(speed, 0);
-	 }
-	 
-	 function interact():Void  //Function to initiate interaction with a valid object if player is in range
-	 {
-		//Initiate the interaction with the object, in this case checking the attached minigame and loading its corresponding Gamestate
-		trace("interact() called");
 	 }
  }
