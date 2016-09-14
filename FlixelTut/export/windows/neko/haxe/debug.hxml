@@ -1,12 +1,12 @@
 -main ApplicationMain 
--cp C:/Users/huange2/haxelib install openfl/flixel/4,1,1
+-cp C:/Users/ringk2/haxelib install openfl/flixel/4,1,1
 -D flixel=4.1.1
--cp C:/Users/huange2/haxelib install openfl/lime/2,9,1
+-cp C:/Users/ringk2/haxelib install openfl/lime/2,9,1
 -D lime=2.9.1
--cp C:/Users/huange2/haxelib install openfl/openfl/3,6,1
+-cp C:/Users/ringk2/haxelib install openfl/openfl/3,6,1
 -D openfl=3.6.1
 -cp source
--cp C:\Users\huange2\haxelib install openfl\lime/2,9,1/legacy
+-cp C:\Users\ringk2\haxelib install openfl\lime/2,9,1/legacy
 -D HXCPP_QUIET
 -D openfl-legacy
 -D tools=2.9.1
@@ -18,7 +18,6 @@
 -D FLX_NO_TOUCH
 -D openfl-native
 -D lime-native
--D fdb
 -D windows
 -D desktop
 --remap flash:openfl
