@@ -22,7 +22,7 @@
      {
          super(X, Y, SimpleGraphic);
 		 //makeGraphic(16, 16, FlxColor.GREEN);
-		 loadGraphic("assets/images/duck.png", true, 100, 114);
+		 loadGraphic("assets/images/duck.png", true, 100, 114); //Asset name, Animated Bool, Width, Height
 		 //setFacingFlip(direction,flipx,flipy
 		 setFacingFlip(FlxObject.LEFT, true, false);
 		 setFacingFlip(FlxObject.RIGHT, false, false);
