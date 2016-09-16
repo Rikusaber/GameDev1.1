@@ -16,29 +16,32 @@
  	 //helper variables to be able to tell which keys are pressed
  	 var _left:Bool = false;
  	 var _right:Bool = false;
-      var player_health:Float = 0;
-      var myT = new FlxText (0,0, 500);
+   var player_health:Float = 0;
+   var courage:Int = 0;
+
+   var _score:Float = 0;
 
      public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
      {
-         //spawn player position    
-         super( (FlxG.width/2), FlxG.height-100);
-
-         loadGraphic("assets/images/duck.png", true, 100,114);
-         //set Facing Flip (direction, flipx, flipy)
-         setFacingFlip(FlxObject.LEFT, true, false);
-         setFacingFlip(FlxObject.RIGHT,false,false);
-         //name of animation, frames, fps, loop
-         animation.add("walk", [0,1,0,2],5,true);
-         drag.x = drag.y = 1000;
-     	
+      //spawn player position    
+      super( (FlxG.width/2), FlxG.height-100);
+     loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
+     setFacingFlip(FlxObject.LEFT, true, false);
+     setFacingFlip(FlxObject.RIGHT, false, false);
+     animation.add("walk", [0, 1, 0, 2], 5, true);
+     
+     loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
+     animation.add("idle", [0, 1, 2, 3, 4], 5, true);
+     
+     
+     drag.x = drag.y = 1600;
      }
 
      override public function update(elapsed:Float):Void
      {
-          movement();
-          bound();
-          damaged();
+      movement();
+      bound();
+      damaged();
      	super.update(elapsed);
      }
  
@@ -75,7 +78,7 @@
           {
                animation.play("walk");
           }
-          else animation.stop();
+          else animation.play("idle");
      }
 
    function damaged():Void 

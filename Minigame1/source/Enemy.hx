@@ -10,19 +10,23 @@
 
  class Enemy extends FlxSprite
  {
-  	var speed:Float = 200;
+  	var speed:Float = FlxG.random.float(0.0, 200);
+    var _score:Float = 0;
+    var _player:PlayerMiniDodge;
+
 	  public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
 	 {
 	 	//spawn enemy position
 	 	super( (FlxG.width/2), 0);
 	 	drag.y = 2000;
+
 	 }
 
    override public function update(elapsed:Float):Void
    {
    	fall();
    	bound();
-   	//damage();
+
    	super.update(elapsed);
    }
 
@@ -39,7 +43,15 @@
      //bottom of screen
      if ( y > FlxG.height ) 
      {
-          setPosition(Math.random() * FlxG.width, 0);
+          setPosition(FlxG.random.float(0.0, FlxG.width));
      }
    }
+
+   function damage():Void 
+   //check if objects are colliding with player, if so, destroy's itself 
+   {
+      kill();
+   }
+
+
 }
