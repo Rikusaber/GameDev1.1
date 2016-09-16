@@ -24,14 +24,11 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		_player = new PlayerMiniDodge();
-//		_enemies = new Enemy();
 		add(_player);
 		add(_enemies);
 		for (i in 0..._numEnemies) 
 		{
-			
 			spawnEnemy();
-
 		}
 
 		_player.scale.set(.5, .5);
@@ -53,7 +50,6 @@ class PlayState extends FlxState
 
 	function spawnEnemy():Void
 	{
-
 		var enemy:Enemy = new Enemy();
 		enemy.x = FlxG.random.float(0.0, FlxG.width);
 		enemy.y = 0;
@@ -63,15 +59,13 @@ class PlayState extends FlxState
 
 	function onCollision(_player:FlxSprite, enemies:Enemy):Void
 	{
-
+		//if colliding and both exist 
 		if (enemies.exists && _player.exists) 
 		{
-			enemies.kill();
+			enemies.kill(); //destroy enemy
 			score += 10;
 		}
 	}
-
-
 
 	function updateScore():Void
 	{
