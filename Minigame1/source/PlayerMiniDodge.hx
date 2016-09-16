@@ -25,65 +25,58 @@
      {
       //spawn player position    
       super( (FlxG.width/2), FlxG.height-100);
-     loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
-     setFacingFlip(FlxObject.LEFT, true, false);
-     setFacingFlip(FlxObject.RIGHT, false, false);
-     animation.add("walk", [0, 1, 0, 2], 5, true);
-     
-     loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
-     animation.add("idle", [0, 1, 2, 3, 4], 5, true);
-     
-     
-     drag.x = drag.y = 1600;
-     }
+      loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
+      setFacingFlip(FlxObject.LEFT, true, false);
+      setFacingFlip(FlxObject.RIGHT, false, false);
+      animation.add("walk", [0, 1, 0, 2], 5, true);
+       
+      loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
+      animation.add("idle", [0, 1, 2, 3, 4], 5, true);
+       
+      drag.x = drag.y = 1600;
+    }
 
-     override public function update(elapsed:Float):Void
-     {
-      movement();
-      bound();
-      damaged();
-     	super.update(elapsed);
-     }
- 
-     function movement():Void
-     {
-
-     	_left = FlxG.keys.anyPressed([LEFT,A]);
-     	_right = FlxG.keys.anyPressed([RIGHT,D]);
-
-     	//cancel out opposing directions
-     	if(_left && _right)
-     	{
-     		_left = _right = false;
-     	}
-
-     	if(_left || _right)
-     	{
-     		if (_left) 
-     		{
-     			_rot = 180;
-                    facing = FlxObject.LEFT;
-     		}
-     		else if (_right)
-     		{
-     			_rot = 0;
-                    facing = FlxObject.RIGHT;
-     		}
-
-     		velocity.set(speed,0); //pixels per sec x to right, y
-     		velocity.rotate(new FlxPoint(0,0), _rot); //point & angle
-     	}
-          
-          if (velocity.x != 0 || velocity.y != 0) 
-          {
-               animation.play("walk");
-          }
-          else animation.play("idle");
-     }
-
-   function damaged():Void 
+   override public function update(elapsed:Float):Void
    {
-     //if hit, subtract health/courage/w/e
+    movement();
+    bound();
+   	super.update(elapsed);
+   }
+
+   function movement():Void
+   {
+
+   	_left = FlxG.keys.anyPressed([LEFT,A]);
+   	_right = FlxG.keys.anyPressed([RIGHT,D]);
+
+   	//cancel out opposing directions
+   	if(_left && _right)
+   	{
+   		_left = _right = false;
+   	}
+
+   	if(_left || _right)
+   	{
+   		if (_left) 
+   		{
+   			_rot = 180;
+                  facing = FlxObject.LEFT;
+   		}
+   		else if (_right)
+   		{
+   			_rot = 0;
+                  facing = FlxObject.RIGHT;
+   		}
+
+   		velocity.set(speed,0); //pixels per sec x to right, y
+   		velocity.rotate(new FlxPoint(0,0), _rot); //point & angle
+   	}
+        
+        if (velocity.x != 0 || velocity.y != 0) 
+        {
+             animation.play("walk");
+        }
+        else animation.play("idle");
    }
 
    function bound():Void 
@@ -91,7 +84,7 @@
      //bind the player from leaving the screen
      //if out of bounds, move player to opposite side of screen
      //left side of screen
-     if ( x > FlxG.width ) 
+     if ( x > FlxG.width ) //a little wonky
      {
           setPosition(0, FlxG.height - 100);
      }
