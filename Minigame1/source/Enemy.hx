@@ -46,12 +46,4 @@
           setPosition(FlxG.random.float(0.0, FlxG.width));
      }
    }
-
-   function damage():Void 
-   //check if objects are colliding with player, if so, destroy's itself 
-   {
-      kill();
-   }
-
-
 }
