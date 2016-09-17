@@ -109,5 +109,7 @@
 	 {
 		//Initiate the interaction with the object, in this case checking the attached minigame and loading its corresponding Gamestate
 		trace("interact() called");
+		
+		//switchTo(nextState:FlxState):Bool //Use this function to switch gamestate (trying to determine optimal place to implement
 	 }
  }

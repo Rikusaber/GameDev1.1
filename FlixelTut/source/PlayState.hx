@@ -30,6 +30,6 @@ class PlayState extends FlxState
             FlxG.fullscreen = !FlxG.fullscreen;
 		}
 		
-
+	 //switchTo(nextState:FlxState):Bool //Use this function to switch gamestate (trying to determine optimal place to implement
 	}
 }
