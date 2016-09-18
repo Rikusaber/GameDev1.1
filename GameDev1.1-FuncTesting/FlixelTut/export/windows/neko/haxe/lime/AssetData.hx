@@ -20,6 +20,10 @@ class AssetData {
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
 			type.set ("assets/images/IdleSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/map/MapFull.png", "assets/images/map/MapFull.png");
+			type.set ("assets/images/map/MapFull.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/map/MapOnlyBuildings.png", "assets/images/map/MapOnlyBuildings.png");
+			type.set ("assets/images/map/MapOnlyBuildings.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/WorldMap-Neighborhood.png", "assets/images/WorldMap-Neighborhood.png");
 			type.set ("assets/images/WorldMap-Neighborhood.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("flixel/sounds/beep.ogg", "flixel/sounds/beep.ogg");

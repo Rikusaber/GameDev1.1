@@ -16,7 +16,7 @@ package;
 	 {
 	 	//spawn enemy position
 	 	super( (FlxG.mouse.x), (FlxG.mouse.y) );
-		makeGraphic(64, 64, FlxColor.RED);
+		makeGraphic(64, 64, FlxColor.BLUE);
 	 	drag.y = 2000;
 
 	 }
