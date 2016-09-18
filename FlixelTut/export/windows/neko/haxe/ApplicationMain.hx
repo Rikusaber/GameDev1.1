@@ -511,7 +511,11 @@ class ApplicationMain {
 		
 		config = {
 			
+<<<<<<< HEAD
 			build: "25",
+=======
+			build: "18",
+>>>>>>> origin/Igor's_Minigame_testing
 			company: "HaxeFlixel",
 			file: "FlixelTut",
 			fps: 60,

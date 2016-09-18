@@ -1,0 +1,71 @@
+Criteria:
+1a-It's dangerous to go alone, take this. -Courage
+
+1b-The Lens of Infinite Inspiration: To use this lens, stop looking at your game or games like it. 
+Instead, look everywhere else.
+What is an experience I have had in my life that I want to share with others?
+In what small ways can I capture the essence of that experience and put it into my game?
+
+2-The Lens of Endogenous Value: To use this lens, think about your player's feelings about items, 
+objects, and scoring in your game
+What is valuable to the players in my game? How can I make it more valuable to them?
+What is the relationship between value in the game and the player's motivation?
+
+
+Game Genre: Casual, puzzle similar to Undertale where the player solves puzzles of increasing 
+difficulty to complete the game.
+
+Core Gamplay Mechanics: Similar to Undertale, the player can move around, gain courage, interact
+and talk to objects
+
+Target Audience: Males and Females ages 12-16 because there are some concepts in the game that can
+trigger people. The puzzles also require some thinking and strategy.
+
+Intended Tone: Lighthearted and dark; the overall experience in the game may be silly 
+and frivolous, but the threats to the character are meant to be taken seriously.    
+
+Story Overview:
+A child wakes up in a town similar to the one he came from—the only difference, that this town is 
+plagued with his fears and insecurities; he has to find the courage to defeat them so he can awaken
+from this dream.
+
+Our boy, young ____ wakes up in the middle of a field on the outskirts of town. He is unsure why 
+he's here or how long he's been asleep, but he figures he should get back home before his mother 
+scolds him. As he makes his way back to the village, a throbbing pain strikes his mouth--it was a tooth 
+ache! He opens his mouth and presses a finger on his back tooth. The tooth is loose but he is scared 
+to take it out himself. For fear that he might swallow the tooth accidentally, he finds his way to the 
+local dentist's office. Inside he doesn't find a typical dentist's office, instead he finds that the 
+floors were a creature's gums and the ceilings were the roof of its mouth. Everywhere he looked there 
+were teeth of all shapes and sizes. 
+ ----------------- first mini game -------------------
+ ------- After dodging most of the teeth and ---------
+ ------- gathering enough courage to let his ---------
+ ------- tooth fall out, the minigame ends.-----------
+
+
+
+World Overview:
+_______ is a small town with a small population. Because of its size, most of the residents know
+everyone's names. There are a few shops and houses, a pond _____________. 
+
+
+Character Overview:
+_______ is a child--no older than 15. 
+
+Minigame Ideas:
+1)Fear of Growing Up (losing teeth, wiggly teeth)
+  mechanics: dodge falling teeth; left/right movement; pick up boosts, lose health if hit 
+  aesthetics: dragon teeth, human teeth; dungeon music
+  outcome: gain courage to move forward and essentially grow up
+
+2)Being Chased (running away from soemthing causing anxiety, stress, fear, etc)
+  mechanics: avoid enemy AI and get to the finish line where player may confront the chaser
+  aesthetics: monsters, adults, etc chasing player around a building, house, or town
+  outcome: gain courage to tackle difficult problems; combat exp, talking skills
+
+3)Fear of Being Alone in an Ocean or Big Pond (on a boat, in a storm, at night)
+  mechanics: get through (whether by swimming or rowing) a maze with a small light source that has a limited radius, reach the end to get out
+  aesthetics: small flashlight with light concentrated in center, then fades out with distance; at the end, grab a ring buoy to exit minigame and the ocean/pond
+  outcome: gain courage to overcome fear, dilligence to struggle through the maze
+
+

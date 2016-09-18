@@ -16,6 +16,7 @@ class AssetData {
 		
 		if (!initialized) {
 			
+<<<<<<< HEAD
 			path.set ("assets/font.ttf", "assets/font.ttf");
 			type.set ("assets/font.ttf", Reflect.field (AssetType, "font".toUpperCase ()));
 			path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
@@ -26,6 +27,16 @@ class AssetData {
 			type.set ("assets/images/IdleSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/WorldMap-Neighborhood.png", "assets/images/WorldMap-Neighborhood.png");
 			type.set ("assets/images/WorldMap-Neighborhood.png", Reflect.field (AssetType, "image".toUpperCase ()));
+=======
+			path.set ("assets/data/MapTestCollision.tmx", "assets/data/MapTestCollision.tmx");
+			type.set ("assets/data/MapTestCollision.tmx", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/images/duck.png", "assets/images/duck.png");
+			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/invi.png", "assets/images/invi.png");
+			type.set ("assets/images/invi.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/map.png", "assets/images/map.png");
+			type.set ("assets/images/map.png", Reflect.field (AssetType, "image".toUpperCase ()));
+>>>>>>> origin/Igor's_Minigame_testing
 			path.set ("flixel/sounds/beep.ogg", "flixel/sounds/beep.ogg");
 			type.set ("flixel/sounds/beep.ogg", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("flixel/sounds/flixel.ogg", "flixel/sounds/flixel.ogg");
