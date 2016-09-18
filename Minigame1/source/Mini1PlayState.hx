@@ -16,7 +16,7 @@ class Mini1PlayState extends FlxState
 {
 	var _player:PlayerMiniDodge;
 	//var _enemies:Enemy;
-	var _numEnemies:Int = 15;
+	var _numEnemies:Int = 5;
 	var _score:FlxText;
 
 	//make a group of enemies
@@ -58,7 +58,6 @@ class Mini1PlayState extends FlxState
 		updateScore();
 
 		//add courage for time elapsed
-		countdown -= FlxG.elapsed;
 		endScene();
 		super.update(elapsed);
 	}
@@ -83,7 +82,7 @@ class Mini1PlayState extends FlxState
 			{
 				//return to hub
 				//FlxG.switchState(new MyState());
-				super.destroy();
+				//super.destroy();
 			}
 		}
 	}
@@ -95,7 +94,8 @@ class Mini1PlayState extends FlxState
 
 	function endScene():Void
 	{
-		if (countdown == 0) 
+		countdown -= FlxG.elapsed;
+		if (countdown <= 0) 
 		{
 			//return to hub
 			//FlxG.switchState(new MyState());
