@@ -14,6 +14,7 @@ import flixel.FlxObject;
 class PlayState extends FlxState
 {
 	var _player:Player;
+	var _boxColi:BoxCollider;
 	var _DummyStarter:DummyMiniStarter;
 	
 	override public function create():Void
@@ -22,13 +23,14 @@ class PlayState extends FlxState
 		bg.scale.set(.5, .5);
 		_player = new Player(700, 700);
 		_player.scale.set(.5, .5);
-		
+		_boxColi = new BoxCollider(_player.x+_player.width/2, _player.y+_player.height+100);
 		_DummyStarter = new DummyMiniStarter(300, 300);
 		_DummyStarter.x = _player.x + 100;
 		_DummyStarter.y = _player.y + 100;
 		
 		add(bg);
 		add(_player);
+		add(_boxColi);
 		add(_DummyStarter);
 		
 		super.create();
@@ -41,15 +43,25 @@ class PlayState extends FlxState
 		if (FlxG.keys.justPressed.ENTER){
             FlxG.fullscreen = !FlxG.fullscreen;
 		}
-			
-		/*
-		if (FlxG.keys.justPressed.SPACE){
+		
+		//FlxG.overlap(_player, _DummyStarter, onCollision);
+		
+		
+		_boxColi.x = _player.x+_player.width/2-_boxColi.width/2;
+		_boxColi.y = _player.y + _player.height * (2 / 3)/*-_boxColi.height/2*/;
+		_boxColi.visible = false;
+		if (FlxCollision.pixelPerfectCheck(_player, _DummyStarter, 255)&& FlxG.keys.justPressed.SPACE) 
+		{	
+			FlxG.switchState(new Mini1PlayState());
+		} 		
+		if (FlxCollision.pixelPerfectCheck(_boxColi, _DummyStarter, 1)&& FlxG.keys.justPressed.M) 
+		{	
+			FlxG.switchState(new Mini1PlayState());
+		} 
+		
+		/*if (FlxG.keys.justPressed.SPACE){
             FlxG.switchState(new Mini1PlayState());
 		} */
-		
-		if (FlxCollision.pixelPerfectCheck(_player, _DummyStarter, 255)&& FlxG.keys.justPressed.SPACE) { //Controls change of state
-			FlxG.switchState(new Mini1PlayState());
-		}
 		
 		
 	}
