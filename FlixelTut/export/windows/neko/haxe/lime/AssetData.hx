@@ -16,6 +16,10 @@ class AssetData {
 		
 		if (!initialized) {
 			
+			path.set ("assets/font.ttf", "assets/font.ttf");
+			type.set ("assets/font.ttf", Reflect.field (AssetType, "font".toUpperCase ()));
+			path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
+			type.set ("assets/images/DownWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/duck.png", "assets/images/duck.png");
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");

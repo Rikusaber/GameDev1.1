@@ -49,7 +49,7 @@ class Mini1PlayState extends FlxState
 		updateScore();
 		super.update(elapsed);
 		
-		if (FlxG.keys.justPressed.SPACE){
+		if (FlxG.keys.justPressed.SPACE){ //Test code, goes back to "hub" playstate when pressing SPACE. Meant to test transitions
             FlxG.switchState(new PlayState());
 		}
 	}

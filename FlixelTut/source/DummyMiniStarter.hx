@@ -1,4 +1,4 @@
-package;
+ package;
 
  import flixel.FlxSprite;
  import flixel.system.FlxAssets.FlxGraphicAsset;
@@ -11,11 +11,12 @@ package;
  class DummyMiniStarter extends FlxSprite
  {
   	
+	 var _player:Player;
 
 	  public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
 	 {
 	 	//spawn enemy position
-	 	super( (FlxG.mouse.x), (FlxG.mouse.y) );
+	 	super( 100, 100 );
 		makeGraphic(64, 64, FlxColor.RED);
 	 	drag.y = 2000;
 

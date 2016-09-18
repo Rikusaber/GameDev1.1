@@ -56,6 +56,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		super ();
 		
 		
+		Font.registerFont (__ASSET__assets_font_ttf);
+		
 		
 		
 		
@@ -69,6 +71,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -500,11 +504,13 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+@:keep class __ASSET__assets_font_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/font.ttf"; fontName = "Visitor TT1 BRK"; }}
 
 
 #else
 
 
+class __ASSET__assets_font_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/font.ttf"; fontName = "Visitor TT1 BRK";  }}
 class __ASSET__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/nokiafc22.ttf"; fontName = "Nokia Cellphone FC Small";  }}
 class __ASSET__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/monsterrat.ttf"; fontName = "Monsterrat";  }}
 
@@ -569,6 +575,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if (openfl && !flash)
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_font_ttf);
+		
 		
 		
 		
@@ -582,6 +590,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("assets/font.ttf", "assets/font.ttf");
+		type.set ("assets/font.ttf", AssetType.FONT);
+		path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
+		type.set ("assets/images/DownWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/duck.png", "assets/images/duck.png");
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
 		path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
@@ -603,6 +615,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/font.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
+		id = "assets/images/DownWalkSomnia.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/duck.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -649,6 +667,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		
+		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
+		type.set ("assets/font.ttf", AssetType.FONT);
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1388,6 +1410,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1396,6 +1420,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+@:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { super (); name = "Visitor TT1 BRK"; } } 
 
 
 
@@ -1409,6 +1435,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #else
 
+@:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/font.ttf"; name = "Visitor TT1 BRK"; super (); }}
 
 
 #if (windows || mac || linux || cpp)
@@ -1426,6 +1453,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__assets_font_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/font.ttf"; name = "Visitor TT1 BRK"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_nokiafc22_ttf (); src = font.src; name = font.name; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_monsterrat_ttf (); src = font.src; name = font.name; super (); }}
 

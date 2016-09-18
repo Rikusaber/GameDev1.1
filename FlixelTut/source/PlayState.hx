@@ -1,13 +1,22 @@
 package;
 
-import flixel.FlxG;
+/*import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 
+import flixel.FlxObject; */
+
+import flixel.FlxCamera;
+import flixel.FlxG;
 import flixel.FlxObject;
+import flixel.FlxSprite;
+import flixel.FlxState;
+import flixel.text.FlxText;
+import flixel.util.FlxColor;
+import flixel.group.FlxGroup;
 
 
 class PlayState extends FlxState
@@ -43,9 +52,9 @@ class PlayState extends FlxState
 		
 		FlxG.overlap(_player, _DummyStarter, onCollision);
 		
-		/*if (FlxG.keys.justPressed.SPACE){
+		if (FlxG.keys.justPressed.SPACE){
             FlxG.switchState(new Mini1PlayState());
-		} */
+		} 
 	  
 	}
 	

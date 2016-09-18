@@ -12,7 +12,7 @@
  {
   	var speed:Float = FlxG.random.float(0.0, 200);
     var _score:Float = 0;
-    var _player:PlayerMiniDodge;
+    //var _player:PlayerMiniDodge;
 
 	  public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
 	 {
