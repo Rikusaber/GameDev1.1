@@ -23,11 +23,6 @@ class MenuState extends FlxState
 		add(_playButton2);
 		super.create();
 		
-<<<<<<< HEAD
-		
-=======
-	
->>>>>>> origin/Igor's_Minigame_testing
 	}
 
 	override public function update(elapsed:Float):Void

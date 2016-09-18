@@ -1,22 +1,14 @@
 package;
 
-/*import flixel.FlxG;
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
+import flixel.util.FlxCollision;
 
-import flixel.FlxObject; */
-
-import flixel.FlxCamera;
-import flixel.FlxG;
 import flixel.FlxObject;
-import flixel.FlxSprite;
-import flixel.FlxState;
-import flixel.text.FlxText;
-import flixel.util.FlxColor;
-import flixel.group.FlxGroup;
 
 
 class PlayState extends FlxState
@@ -49,22 +41,19 @@ class PlayState extends FlxState
 		if (FlxG.keys.justPressed.ENTER){
             FlxG.fullscreen = !FlxG.fullscreen;
 		}
-		
-		FlxG.overlap(_player, _DummyStarter, onCollision);
-		
+			
+		/*
 		if (FlxG.keys.justPressed.SPACE){
             FlxG.switchState(new Mini1PlayState());
-		} 
-	  
-	}
-	
-	function onCollision(_player:FlxSprite, _DummyStarter:DummyMiniStarter):Void
-	{
-		trace("Player touching Dummy Object");
-		//if colliding and both exist 
-		if (_DummyStarter.exists && _player.exists /*&& FlxG.keys.justPressed.SPACE */) 
-		{
+		} */
+		
+		if (FlxCollision.pixelPerfectCheck(_player, _DummyStarter, 255)&& FlxG.keys.justPressed.SPACE) { //Controls change of state
 			FlxG.switchState(new Mini1PlayState());
 		}
+		
+		
 	}
+	
+	
+	
 }

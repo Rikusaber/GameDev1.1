@@ -93,7 +93,6 @@
 		// velocity.set(100, 0);
 		//velocity.set(speed, 0);
 	 }
-<<<<<<< HEAD
 	 
 	 function interact():Void  //Function to initiate interaction with a valid object if player is in range
 	 {
@@ -101,6 +100,5 @@
 		//trace("interact() called");
 		
 	 }
-=======
->>>>>>> origin/Igor's_Minigame_testing
+
  }
