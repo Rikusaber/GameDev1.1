@@ -23,15 +23,19 @@
      public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
      {
          super(X, Y, SimpleGraphic);
+		 loadGraphic("assets/images/Somnia.png", true, 96, 96);
 		 //makeGraphic(16, 16, FlxColor.GREEN);
-		 loadGraphic("assets/images/duck.png", true, 100, 114);
+		 //loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
 		 //setFacingFlip(direction,flipx,flipy)
 		 setFacingFlip(FlxObject.LEFT, true, false);
 		 setFacingFlip(FlxObject.RIGHT, false, false);
-		 animation.add("walk", [0, 1, 0, 2], 5, true);
+		 //animation.add("walk", [0, 1, 2, 3], 5, true);
+		 animation.add("idle", [0, 1, 2, 3, 4], 6, true);
 		 
-		 loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
-		 animation.add("idle", [0, 1, 2, 3, 4], 5, true);
+		 //loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
+		 animation.add("walk", [5, 6, 7, 8], 6, true);
+		 //loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
+		 //animation.add("idle", [0, 1, 2, 3, 4], 5, true);
 		 
 		 
 		 drag.x = drag.y = 1600;
@@ -84,8 +88,9 @@
 			animation.play("walk");
 		 }
 		 else {
-			
+			//animation.stop();
 			animation.play("idle");
+			
 		 }
 		 
 		// velocity.set(100, 0);
