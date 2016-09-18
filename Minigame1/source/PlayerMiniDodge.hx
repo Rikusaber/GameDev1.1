@@ -38,6 +38,7 @@
 
    override public function update(elapsed:Float):Void
    {
+
     movement();
     bound();
    	super.update(elapsed);
