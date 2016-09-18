@@ -10,15 +10,16 @@
 
  class Enemy extends FlxSprite
  {
-  	var speed:Float = FlxG.random.float(0.0, 200);
+  	var speed:Float = FlxG.random.float(50, 200);
     var _score:Float = 0;
-    var _player:PlayerMiniDodge;
 
 	  public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
 	 {
 	 	//spawn enemy position
 	 	super( (FlxG.width/2), 0);
-	 	drag.y = 2000;
+    //loadGraphic("assets/images/tooth.png", true, 16, 16);
+	 	loadGraphic("assets/images/tooth2.png", true, 24, 24);
+    drag.y = 2000;
 
 	 }
 
@@ -44,6 +45,7 @@
      if ( y > FlxG.height ) 
      {
           setPosition(FlxG.random.float(0.0, FlxG.width));
+          velocity.set(0,FlxG.random.float(50,200));
      }
    }
 }
