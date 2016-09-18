@@ -19,17 +19,21 @@ class Mini1PlayState extends FlxState
 	var _numBoosts:Int = 3;
 	var _score:FlxText;
 
+	//keep track of courage and stuff
+	static public var courage:Float = 0.0;
+    static public var maxCourage:Float = 0.0;
+
 	//make a group of enemies
 	var _enemies = new FlxTypedGroup<Enemy>();
 	var _boosts = new FlxTypedGroup<Boosts>();
 	var score:Float = 0;
-	var courage:Float = 0;
 
 	//time limit
 	var countdown:Float = 90;
 
 	override public function create():Void
 	{
+		maxCourage +=  _numBoosts;
 		var bg:FlxSprite = new FlxSprite(0,0);
 		var health:FlxSprite = new FlxSprite(0,0);
 		health.loadGraphic("assets/images/health.png");
@@ -50,6 +54,7 @@ class Mini1PlayState extends FlxState
 		{
 			spawnBoosts();
 		}
+		
 		_player.scale.set(.5, .5);
 
 		//keep track of score
@@ -66,7 +71,6 @@ class Mini1PlayState extends FlxState
 		FlxG.overlap(_player, _boosts, onCollision2);
 		updateScore();
 
-		//add courage for time elapsed
 		endScene();
 		super.update(elapsed);
 	}
@@ -96,9 +100,12 @@ class Mini1PlayState extends FlxState
 		{
 			enemies.kill(); //destroy enemy
 			score -= 10;
+			courage -= 1;
 			if (score <= -20)
 			{
 				//return to hub
+				//maxCourage +=  _numBoosts + countdown;
+				//courage += countdown;
 				FlxG.switchState(new EndScreen());
 			}
 		}
@@ -111,6 +118,7 @@ class Mini1PlayState extends FlxState
 		{
 			boosts.kill(); //destroy teeth
 			score += 10;
+			courage += 1;
 		}
 	}
 
@@ -126,6 +134,8 @@ class Mini1PlayState extends FlxState
 		if (countdown <= 0) 
 		{
 			//return to hub
+			//maxCourage +=  _numBoosts + countdown;
+			//courage += countdown;
 			FlxG.switchState(new EndScreen());
 		}
 	}
