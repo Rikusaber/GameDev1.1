@@ -42,6 +42,8 @@
 	 override public function update(elapsed:Float):Void
 	 {
 		 movement();
+		 bound();
+		 
 		 super.update(elapsed);
 	 }
 	 function movement():Void
@@ -94,11 +96,18 @@
 		//velocity.set(speed, 0);
 	 }
 	 
-	 function interact():Void  //Function to initiate interaction with a valid object if player is in range
-	 {
-		//Initiate the interaction with the object, in this case checking the attached minigame and loading its corresponding Gamestate
-		//trace("interact() called");
-		
-	 }
+	 function bound():Void 
+		{
+		 //bind the player from leaving the screen
 
+		 if ( x > FlxG.width ) //a little wonky, goes past the right edge despite code
+		 {
+			  setPosition(FlxG.width, y);
+		 }
+		 //right side of screen
+		 else if ( x < 0 )
+		 {
+			  setPosition(0, y);
+		 }
+		}
  }

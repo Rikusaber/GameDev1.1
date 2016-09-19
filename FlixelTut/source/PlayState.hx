@@ -16,6 +16,7 @@ class PlayState extends FlxState
 	var _player:Player;
 	var _boxColi:BoxCollider;
 	var _DummyStarter:DummyMiniStarter;
+	var _DummyStarter2:DummyMiniStarter;
 	
 	override public function create():Void
 	{
@@ -28,10 +29,15 @@ class PlayState extends FlxState
 		_DummyStarter.x = _player.x + 100;
 		_DummyStarter.y = _player.y + 100;
 		
+		_DummyStarter2 = new DummyMiniStarter(300, 300);
+		_DummyStarter2.x = _player.x + 200;
+		_DummyStarter2.y = _player.y + 100;
+		
 		add(bg);
 		add(_player);
 		add(_boxColi);
 		add(_DummyStarter);
+		add(_DummyStarter2);
 		
 		super.create();
 		FlxG.camera.follow(_player, TOPDOWN, 1);
@@ -54,9 +60,15 @@ class PlayState extends FlxState
 		{	
 			FlxG.switchState(new Mini1PlayState());
 		} 		
+		
 		if (FlxCollision.pixelPerfectCheck(_boxColi, _DummyStarter, 1)&& FlxG.keys.justPressed.M) 
 		{	
 			FlxG.switchState(new Mini1PlayState());
+		} 
+		
+		if (FlxCollision.pixelPerfectCheck(_boxColi, _DummyStarter2, 1)&& FlxG.keys.justPressed.M) 
+		{	
+			FlxG.switchState(new Mini2PlayState());
 		} 
 		
 		/*if (FlxG.keys.justPressed.SPACE){
