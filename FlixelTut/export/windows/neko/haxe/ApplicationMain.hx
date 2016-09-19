@@ -511,7 +511,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "24",
+			build: "30",
 			company: "HaxeFlixel",
 			file: "FlixelTut",
 			fps: 60,

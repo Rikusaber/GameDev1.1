@@ -14,6 +14,8 @@ class Mini2PlayState extends FlxState
 {
 	var _player:PlayerMaze;
 	var _boxColi:BoxCollider;
+	
+	var _winThing:DummyMiniStarter;
 
 	override public function create():Void
 	{
@@ -21,8 +23,13 @@ class Mini2PlayState extends FlxState
 		
 		_boxColi = new BoxCollider(_player.x + _player.width / 2, _player.y + _player.height + 100);
 		
+		_winThing = new DummyMiniStarter(FlxG.width / 2, 0);
+		_winThing.screenCenter();
+		_winThing.y = 0;
+		
 		add(_player);
 		add(_boxColi);
+		add(_winThing);
 		
 		_player.scale.set(.5, .5);
 
