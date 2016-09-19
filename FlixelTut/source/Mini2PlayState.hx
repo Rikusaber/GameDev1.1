@@ -12,12 +12,12 @@ import flixel.group.FlxGroup;
 
 class Mini2PlayState extends FlxState
 {
-	var _player:Player;
+	var _player:PlayerMaze;
 	var _boxColi:BoxCollider;
 
 	override public function create():Void
 	{
-		_player = new Player(200, 200);
+		_player = new PlayerMaze(200, 200);
 		
 		_boxColi = new BoxCollider(_player.x + _player.width / 2, _player.y + _player.height + 100);
 		

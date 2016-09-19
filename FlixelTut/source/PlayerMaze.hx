@@ -8,7 +8,7 @@
  import flixel.math.FlxPoint;
  import flixel.FlxObject;
 
- class Player extends FlxSprite
+ class PlayerMaze extends FlxSprite
  {
 	 var speed:Float = 200;
 	 var _rot:Float = 0;
@@ -42,6 +42,7 @@
 	 override public function update(elapsed:Float):Void
 	 {
 		 movement();
+		 bound();
 		 
 		 super.update(elapsed);
 	 }
@@ -95,5 +96,18 @@
 		//velocity.set(speed, 0);
 	 }
 	 
-	
+	 function bound():Void 
+		{
+		 //bind the player from leaving the screen
+
+		 if ( x > FlxG.width ) //a little wonky, goes past the right edge in Minigame
+		 {
+			  setPosition(FlxG.width, y);
+		 }
+		 //right side of screen
+		 else if ( x < 0 )
+		 {
+			  setPosition(0, y);
+		 }
+		}
  }
