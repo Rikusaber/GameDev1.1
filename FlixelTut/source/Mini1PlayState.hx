@@ -8,31 +8,53 @@ import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.group.FlxGroup;
+import flixel.util.FlxTimer;
+import flixel.system.FlxAssets.FlxGraphicAsset;
 
 
 class Mini1PlayState extends FlxState
 {
 	var _player:PlayerMiniDodge;
-	//var _enemies:Enemy;
-	var _numEnemies:Int = 50;
+	var _numEnemies:Int = 20;
+	var _numBoosts:Int = 12;
 	var _score:FlxText;
+
+	//keep track of courage and stuff
+	static public var courage:Float = 0.0;
+    static public var maxCourage:Float = 0.0;
+
 	//make a group of enemies
 	var _enemies = new FlxTypedGroup<Enemy>();
-
+	var _boosts = new FlxTypedGroup<Boosts>();
 	var score:Float = 0;
-	
+
 	//time limit
+	var countdown:Float = 90;
 
 	override public function create():Void
 	{
+		maxCourage +=  _numBoosts;
+		var bg:FlxSprite = new FlxSprite(0,0);
+		var health:FlxSprite = new FlxSprite(0,0);
+		health.loadGraphic("assets/images/health.png");
+		bg.loadGraphic("assets/images/mouthbg.png");
 		_player = new PlayerMiniDodge();
+		add(bg);
 		add(_player);
 		add(_enemies);
-		for (i in 0..._numEnemies) 
+		add(_boosts);
+		add(health);
+
+		for (i in 0...4) 
 		{
 			spawnEnemy();
 		}
 
+		for (i in 0...3) 
+		{
+			spawnBoosts();
+		}
+		
 		_player.scale.set(.5, .5);
 
 		//keep track of score
@@ -45,18 +67,20 @@ class Mini1PlayState extends FlxState
 
 	override public function update(elapsed:Float):Void
 	{
-		FlxG.overlap(_player, _enemies, onCollision);
-		updateScore();
-		super.update(elapsed);
-		
-		if (FlxG.keys.justPressed.SPACE){
-            FlxG.switchState(new PlayState());
-		}
-		if (score == 320)
+		countdown -= FlxG.elapsed;
+		//spawn more enemies
+		if (_boosts.countLiving() == 0) 
 		{
-			FlxG.switchState(new PlayState());
+			contSpawn();
 		}
-		
+
+		endScene();
+		FlxG.overlap(_player, _enemies, onCollision);
+		FlxG.overlap(_player, _boosts, onCollision2);
+		updateScore();
+
+
+		super.update(elapsed);
 	}
 
 	function spawnEnemy():Void
@@ -64,24 +88,78 @@ class Mini1PlayState extends FlxState
 		var enemy:Enemy = new Enemy();
 		enemy.x = FlxG.random.float(0.0, FlxG.width);
 		enemy.y = 0;
-		enemy.scale.set(FlxG.random.float(0.5,1), FlxG.random.float(0.8,1));
+		enemy.scale.set(FlxG.random.float(0.5, 0.8), FlxG.random.float(0.8,1));
 		_enemies.add(enemy);
 	}
 
+	function spawnBoosts():Void
+	{
+		var boost:Boosts = new Boosts();
+		boost.x = FlxG.random.float(0.0, FlxG.width);
+		boost.y = 0;
+		boost.scale.set(FlxG.random.float(0.5, 0.8), FlxG.random.float(0.8,1));
+		_boosts.add(boost);
+	}
+
+	function contSpawn():Void
+	{
+		//if total spawned is not 32
+		if ( (_boosts.countDead() + _enemies.countDead() != (_numEnemies + _numBoosts)) )
+		{
+			for (i in 0...4)
+			{
+				spawnEnemy();
+			}
+			for (i in 0...3)
+			{
+				spawnBoosts();
+			}
+		}
+	}
 	function onCollision(_player:FlxSprite, enemies:Enemy):Void
 	{
 		//if colliding and both exist 
 		if (enemies.exists && _player.exists) 
 		{
 			enemies.kill(); //destroy enemy
-			score += 10;
+			score -= 10;
+			courage -= 1;
+			if (score <= -20)
+			{
+				//return to hub
+				//maxCourage +=  _numBoosts + countdown;
+				//courage += countdown;
+				FlxG.switchState(new EndScreen());
+			}
 		}
 	}
+
+	function onCollision2(_player:FlxSprite, boosts:Boosts):Void
+	{
+		//if colliding and both exist 
+		if (boosts.exists && _player.exists) 
+		{
+			boosts.kill(); //destroy teeth
+			score += 10;
+			courage += 1;
+		}
+	}
+
 
 	function updateScore():Void
 	{
 		_score.text = "Score: " + score;
 	}
 
-
+	function endScene():Void
+	{
+		
+		if (countdown <= 0) 
+		{
+			//return to hub
+			//maxCourage +=  _numBoosts + countdown;
+			//courage += countdown;
+			FlxG.switchState(new EndScreen());
+		}
+	}
 }
