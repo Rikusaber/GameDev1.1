@@ -15,8 +15,8 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 class Mini1PlayState extends FlxState
 {
 	var _player:PlayerMiniDodge;
-	var _numEnemies:Int = 5;
-	var _numBoosts:Int = 3;
+	var _numEnemies:Int = 20;
+	var _numBoosts:Int = 12;
 	var _score:FlxText;
 
 	//keep track of courage and stuff
@@ -45,12 +45,12 @@ class Mini1PlayState extends FlxState
 		add(_boosts);
 		add(health);
 
-		for (i in 0..._numEnemies) 
+		for (i in 0...4) 
 		{
 			spawnEnemy();
 		}
 
-		for (i in 0..._numBoosts) 
+		for (i in 0...3) 
 		{
 			spawnBoosts();
 		}
@@ -67,11 +67,19 @@ class Mini1PlayState extends FlxState
 
 	override public function update(elapsed:Float):Void
 	{
+		countdown -= FlxG.elapsed;
+		//spawn more enemies
+		if (_boosts.countLiving() == 0) 
+		{
+			contSpawn();
+		}
+
+		endScene();
 		FlxG.overlap(_player, _enemies, onCollision);
 		FlxG.overlap(_player, _boosts, onCollision2);
 		updateScore();
 
-		endScene();
+
 		super.update(elapsed);
 	}
 
@@ -93,6 +101,21 @@ class Mini1PlayState extends FlxState
 		_boosts.add(boost);
 	}
 
+	function contSpawn():Void
+	{
+		//if total spawned is not 32
+		if ( (_boosts.countDead() + _enemies.countDead() != (_numEnemies + _numBoosts)) )
+		{
+			for (i in 0...4)
+			{
+				spawnEnemy();
+			}
+			for (i in 0...3)
+			{
+				spawnBoosts();
+			}
+		}
+	}
 	function onCollision(_player:FlxSprite, enemies:Enemy):Void
 	{
 		//if colliding and both exist 
@@ -130,7 +153,7 @@ class Mini1PlayState extends FlxState
 
 	function endScene():Void
 	{
-		countdown -= FlxG.elapsed;
+		
 		if (countdown <= 0) 
 		{
 			//return to hub
