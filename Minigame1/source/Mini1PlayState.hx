@@ -2,6 +2,7 @@ package;
 
 import flixel.FlxCamera;
 import flixel.FlxG;
+import flixel.FlxState;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -9,6 +10,8 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.group.FlxGroup;
 import flixel.util.FlxTimer;
+import flixel.tile.FlxTilemap;
+import openfl.Assets;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 
 
@@ -18,6 +21,7 @@ class Mini1PlayState extends FlxState
 	var _numEnemies:Int = 20;
 	var _numBoosts:Int = 12;
 	var _score:FlxText;
+	var _timer:FlxText;
 
 	//keep track of courage and stuff
 	static public var courage:Float = 0.0;
@@ -31,20 +35,20 @@ class Mini1PlayState extends FlxState
 	//time limit
 	var countdown:Float = 90;
 
+
 	override public function create():Void
 	{
-		maxCourage +=  _numBoosts;
+
 		var bg:FlxSprite = new FlxSprite(0,0);
-		var health:FlxSprite = new FlxSprite(0,0);
-		health.loadGraphic("assets/images/health.png");
 		bg.loadGraphic("assets/images/mouthbg.png");
 		_player = new PlayerMiniDodge();
+		_player.width = 24;
+		_player.height = 36;
+		_player.origin.set(-16,0);
 		add(bg);
 		add(_player);
 		add(_enemies);
 		add(_boosts);
-		add(health);
-
 		for (i in 0...4) 
 		{
 			spawnEnemy();
@@ -59,7 +63,9 @@ class Mini1PlayState extends FlxState
 
 		//keep track of score
 		_score = new FlxText(10,10);
+		_timer = new FlxText(FlxG.width - 110, 10);
 		add(_score);
+		add(_timer);
 		updateScore();
 
 		super.create();
@@ -68,6 +74,7 @@ class Mini1PlayState extends FlxState
 	override public function update(elapsed:Float):Void
 	{
 		countdown -= FlxG.elapsed;
+		_timer.text = "Time reminaing: " + Std.int(countdown);
 		//spawn more enemies
 		if (_boosts.countLiving() == 0) 
 		{
@@ -157,8 +164,7 @@ class Mini1PlayState extends FlxState
 		if (countdown <= 0) 
 		{
 			//return to hub
-			//maxCourage +=  _numBoosts + countdown;
-			//courage += countdown;
+			maxCourage +=  _boosts.countDead();
 			FlxG.switchState(new EndScreen());
 		}
 	}
