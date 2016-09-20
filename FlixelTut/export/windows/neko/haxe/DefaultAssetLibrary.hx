@@ -60,6 +60,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		Font.registerFont (__ASSET__assets_font_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -76,6 +87,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -506,19 +528,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux)
 
 
-@:sound("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_beep_ogg extends flash.media.Sound {}
-@:sound("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends flash.media.Sound {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font {}
-@:bitmap("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") @:keep #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData {}
+@:sound("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_beep_ogg extends flash.media.Sound {}
+@:sound("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") @:keep #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends flash.media.Sound {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends flash.text.Font {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") @:keep #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends flash.text.Font {}
+@:bitmap("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") @:keep #if display private #end class __ASSET__flixel_images_ui_button_png extends flash.display.BitmapData {}
 
 
 
+@:keep class __ASSET__assets_font_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/font.ttf"; fontName = "Visitor TT1 BRK"; }}
 
 
 #else
 
 
+class __ASSET__assets_font_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "assets/font.ttf"; fontName = "Visitor TT1 BRK";  }}
 class __ASSET__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/nokiafc22.ttf"; fontName = "Nokia Cellphone FC Small";  }}
 class __ASSET__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "flixel/fonts/monsterrat.ttf"; fontName = "Monsterrat";  }}
 
@@ -587,6 +611,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_font_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -603,26 +638,48 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("assets/data/MapTestCollision.tmx", "assets/data/MapTestCollision.tmx");
+		type.set ("assets/data/MapTestCollision.tmx", AssetType.TEXT);
+		path.set ("assets/data/Test Level.oel", "assets/data/Test Level.oel");
+		type.set ("assets/data/Test Level.oel", AssetType.TEXT);
+		path.set ("assets/data/Testing Map.oep", "assets/data/Testing Map.oep");
+		type.set ("assets/data/Testing Map.oep", AssetType.TEXT);
+		path.set ("assets/data/TileMap.oep", "assets/data/TileMap.oep");
+		type.set ("assets/data/TileMap.oep", AssetType.TEXT);
+		path.set ("assets/font.ttf", "assets/font.ttf");
+		type.set ("assets/font.ttf", AssetType.FONT);
 		path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
 		type.set ("assets/images/DownWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/duck.png", "assets/images/duck.png");
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
 		path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
 		type.set ("assets/images/IdleSomnia.png", AssetType.IMAGE);
+		path.set ("assets/images/invi.png", "assets/images/invi.png");
+		type.set ("assets/images/invi.png", AssetType.IMAGE);
 		path.set ("assets/images/LeftWalkSomnia.png", "assets/images/LeftWalkSomnia.png");
 		type.set ("assets/images/LeftWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/map/MapFull.png", "assets/images/map/MapFull.png");
 		type.set ("assets/images/map/MapFull.png", AssetType.IMAGE);
 		path.set ("assets/images/map/MapOnlyBuildings.png", "assets/images/map/MapOnlyBuildings.png");
 		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
+		path.set ("assets/images/map.png", "assets/images/map.png");
+		type.set ("assets/images/map.png", AssetType.IMAGE);
+		path.set ("assets/images/MapTestCollision.tmx", "assets/images/MapTestCollision.tmx");
+		type.set ("assets/images/MapTestCollision.tmx", AssetType.TEXT);
 		path.set ("assets/images/RightWalkSomnia.png", "assets/images/RightWalkSomnia.png");
 		type.set ("assets/images/RightWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/Somnia.png", "assets/images/Somnia.png");
 		type.set ("assets/images/Somnia.png", AssetType.IMAGE);
+		path.set ("assets/images/tile.png", "assets/images/tile.png");
+		type.set ("assets/images/tile.png", AssetType.IMAGE);
+		path.set ("assets/images/tile2.png", "assets/images/tile2.png");
+		type.set ("assets/images/tile2.png", AssetType.IMAGE);
 		path.set ("assets/images/UpWalkSomnia.png", "assets/images/UpWalkSomnia.png");
 		type.set ("assets/images/UpWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/WorldMap-Neighborhood.png", "assets/images/WorldMap-Neighborhood.png");
 		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
+		path.set ("assets/images/WorldMap-Neighborhood2.png", "assets/images/WorldMap-Neighborhood2.png");
+		type.set ("assets/images/WorldMap-Neighborhood2.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -638,6 +695,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/data/MapTestCollision.tmx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Test Level.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Testing Map.oep";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/TileMap.oep";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/font.ttf";
+		path.set (id, id);
+		type.set (id, AssetType.FONT);
 		id = "assets/images/DownWalkSomnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -645,6 +717,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/IdleSomnia.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/invi.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/LeftWalkSomnia.png";
@@ -656,16 +731,31 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/map/MapOnlyBuildings.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/map.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/MapTestCollision.tmx";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/images/RightWalkSomnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Somnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tile.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tile2.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/UpWalkSomnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/WorldMap-Neighborhood.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/WorldMap-Neighborhood2.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";
@@ -705,6 +795,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		
+		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
+		type.set ("assets/font.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1458,6 +1561,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1466,6 +1580,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+@:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { super (); name = "Visitor TT1 BRK"; } } 
+
+
+
+
+
 
 
 
@@ -1486,16 +1611,17 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #else
 
+@:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/font.ttf"; name = "Visitor TT1 BRK"; super (); }}
 
 
 #if (windows || mac || linux || cpp)
 
 
-@:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.ByteArray {}
-@:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.ByteArray {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
-@:image("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
+@:file("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.ByteArray {}
+@:file("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.ByteArray {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
+@:image("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
 
 
 
@@ -1503,6 +1629,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__assets_font_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "assets/font.ttf"; name = "Visitor TT1 BRK"; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_nokiafc22_ttf (); src = font.src; name = font.name; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_monsterrat_ttf (); src = font.src; name = font.name; super (); }}
 

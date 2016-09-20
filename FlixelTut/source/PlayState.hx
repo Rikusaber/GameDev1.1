@@ -27,6 +27,9 @@ class PlayState extends FlxState
 	var _DummyStarter:DummyMiniStarter;
 	var _buildingColider:Buildings;
 	
+	var _DummyStarter2:DummyMiniStarter;
+
+	
 	override public function create():Void
 	{
 		var bg = new FlxSprite(0, 0, "assets/images/map/MapFull.png");
@@ -38,7 +41,10 @@ class PlayState extends FlxState
 		_player = new Player(100, 100);
 		_player.scale.set(.5, .5);
 		_boxColi = new BoxCollider(_player.x+_player.width/2, _player.y+_player.height+100);
-	
+		
+		_DummyStarter2 = new DummyMiniStarter(300, 300);
+		_DummyStarter2.x = _player.x + 200;
+		_DummyStarter2.y = _player.y + 100;
 		
 		add(bg);
 		
@@ -46,6 +52,9 @@ class PlayState extends FlxState
 		add(_buildingColider);
 		add(_player);
 		add(_boxColi);
+		
+		add(_DummyStarter2)
+
 		
 		super.create();
 		FlxG.camera.follow(_player, TOPDOWN, 1);
@@ -81,7 +90,14 @@ class PlayState extends FlxState
 		} 		
 		
 		
-	
+		if (FlxCollision.pixelPerfectCheck(_player, _DummyStarter2, 255)&& FlxG.keys.justPressed.SPACE) 
+		{	
+			FlxG.switchState(new Mini2PlayState());
+		} 		
+		if (FlxCollision.pixelPerfectCheck(_boxColi, _DummyStarter2, 1)&& FlxG.keys.justPressed.M) 
+		{	
+			FlxG.switchState(new Mini2PlayState());
+		} 	
 	  
 	}
 	
