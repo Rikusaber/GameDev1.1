@@ -11,6 +11,7 @@ package;
 
  class BoxCollider extends FlxSprite
  {
+	 public var isFloat = false;
 	  var speed:Float = 200;
 	 var _rot:Float = 0;
 	 //helper variables to be able to tell which keys are pressed
@@ -32,8 +33,16 @@ package;
 	  
 	 override public function update(elapsed:Float):Void
 	 {
+		 
 		 movement();
 		 //Interaction "range" should be one "tile" length up, down, left, or right
+		
+		 if (isFloat == false){
+			speed = 200;
+		}
+		if (isFloat == true){
+			speed = 75;
+		}
 		
 		 super.update(elapsed);
 	 }

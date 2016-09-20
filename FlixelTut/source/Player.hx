@@ -10,6 +10,7 @@
 
  class Player extends FlxSprite
  {
+	 public var isFloat = false;
 	 var speed:Float = 200;
 	 var _rot:Float = 0;
 	 //helper variables to be able to tell which keys are pressed
@@ -56,7 +57,14 @@
 				//isTouching(Direction:Int):Bool function checks if something is touched in the given direction and returns true/false
 				//Directions here are LEFT, RIGHT, UP, and DOWN
 				interact ();
-			} 
+			}
+		//slow the player's movement when swimming
+		if (isFloat == false){
+			speed = 200;
+		}
+		if (isFloat == true){
+			speed = 50;
+		}
 		
 		 super.update(elapsed);
 	 }

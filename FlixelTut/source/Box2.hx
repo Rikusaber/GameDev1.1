@@ -8,7 +8,7 @@ package;
  import flixel.text.FlxText;
  import flixel.FlxObject;
 
- class DummyMiniStarter extends FlxSprite
+ class Box2 extends FlxSprite
  {
   	
 
@@ -16,7 +16,7 @@ package;
 	 {
 	 	//spawn enemy position
 	 	super( (FlxG.mouse.x), (FlxG.mouse.y) );
-		makeGraphic(90, 90, FlxColor.BLUE);
+		makeGraphic(300, 230, FlxColor.GREEN);
 	 	drag.y = 2000;
 
 	 }

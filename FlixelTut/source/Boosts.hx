@@ -8,7 +8,7 @@
  import flixel.text.FlxText;
  import flixel.FlxObject;
 
- class Enemy extends FlxSprite
+ class Boosts extends FlxSprite
  {
   	var speed:Float = FlxG.random.float(50, 200);
     var _score:Float = 0;
@@ -17,7 +17,7 @@
 	 {
 	 	//spawn enemy position
 	 	super( (FlxG.width/2), 0);
-	 	loadGraphic("assets/images/badtooth.png", true, 24, 24);
+	 	loadGraphic("assets/images/tooth2.png", true, 24, 24);
     drag.y = 2000;
 	 }
 
