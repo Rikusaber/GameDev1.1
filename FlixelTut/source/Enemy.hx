@@ -17,7 +17,8 @@
 	  public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
 	 {
 	 	//spawn enemy position
-	 	super( (FlxG.width/2), 0);
+	 	super( (FlxG.width / 2), 0);
+		loadGraphic("assets/images/badtooth.png", true, 24, 24);
 	 	drag.y = 2000;
 
 	 }

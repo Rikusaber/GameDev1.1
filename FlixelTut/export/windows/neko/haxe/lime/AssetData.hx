@@ -26,10 +26,14 @@ class AssetData {
 			type.set ("assets/data/TileMap.oep", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/font.ttf", "assets/font.ttf");
 			type.set ("assets/font.ttf", Reflect.field (AssetType, "font".toUpperCase ()));
+			path.set ("assets/images/badtooth.png", "assets/images/badtooth.png");
+			type.set ("assets/images/badtooth.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
 			type.set ("assets/images/DownWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/duck.png", "assets/images/duck.png");
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/health.png", "assets/images/health.png");
+			type.set ("assets/images/health.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
 			type.set ("assets/images/IdleSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/invi.png", "assets/images/invi.png");
@@ -44,6 +48,8 @@ class AssetData {
 			type.set ("assets/images/map.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/MapTestCollision.tmx", "assets/images/MapTestCollision.tmx");
 			type.set ("assets/images/MapTestCollision.tmx", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/images/mouthbg.png", "assets/images/mouthbg.png");
+			type.set ("assets/images/mouthbg.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/RightWalkSomnia.png", "assets/images/RightWalkSomnia.png");
 			type.set ("assets/images/RightWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/Somnia.png", "assets/images/Somnia.png");
@@ -52,6 +58,10 @@ class AssetData {
 			type.set ("assets/images/tile.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/tile2.png", "assets/images/tile2.png");
 			type.set ("assets/images/tile2.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/tooth.png", "assets/images/tooth.png");
+			type.set ("assets/images/tooth.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/tooth2.png", "assets/images/tooth2.png");
+			type.set ("assets/images/tooth2.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/UpWalkSomnia.png", "assets/images/UpWalkSomnia.png");
 			type.set ("assets/images/UpWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/WorldMap-Neighborhood.png", "assets/images/WorldMap-Neighborhood.png");
