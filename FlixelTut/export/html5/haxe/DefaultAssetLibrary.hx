@@ -66,16 +66,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
-		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
-		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
 		className.set ("assets/images/duck.png", __ASSET__assets_images_duck_png);
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
-		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
-		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
-		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
-		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
-		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
-		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/IdleSomnia.png", __ASSET__assets_images_idlesomnia_png);
+		type.set ("assets/images/IdleSomnia.png", AssetType.IMAGE);
+		className.set ("assets/images/map/MapFull.png", __ASSET__assets_images_map_mapfull_png);
+		type.set ("assets/images/map/MapFull.png", AssetType.IMAGE);
+		className.set ("assets/images/map/MapOnlyBuildings.png", __ASSET__assets_images_map_maponlybuildings_png);
+		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
+		className.set ("assets/images/WorldMap-Neighborhood.png", __ASSET__assets_images_worldmap_neighborhood_png);
+		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -91,26 +91,26 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "assets/data/data-goes-here.txt";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
 		id = "assets/images/duck.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/images-go-here.txt";
+		id = "assets/images/IdleSomnia.png";
 		path.set (id, id);
 		
-		type.set (id, AssetType.TEXT);
-		id = "assets/music/music-goes-here.txt";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/map/MapFull.png";
 		path.set (id, id);
 		
-		type.set (id, AssetType.TEXT);
-		id = "assets/sounds/sounds-go-here.txt";
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/map/MapOnlyBuildings.png";
 		path.set (id, id);
 		
-		type.set (id, AssetType.TEXT);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/WorldMap-Neighborhood.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
@@ -149,20 +149,20 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var useManifest = false;
 		
-		className.set ("assets/data/data-goes-here.txt", __ASSET__assets_data_data_goes_here_txt);
-		type.set ("assets/data/data-goes-here.txt", AssetType.TEXT);
-		
 		className.set ("assets/images/duck.png", __ASSET__assets_images_duck_png);
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
 		
-		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
-		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/IdleSomnia.png", __ASSET__assets_images_idlesomnia_png);
+		type.set ("assets/images/IdleSomnia.png", AssetType.IMAGE);
 		
-		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
-		type.set ("assets/music/music-goes-here.txt", AssetType.TEXT);
+		className.set ("assets/images/map/MapFull.png", __ASSET__assets_images_map_mapfull_png);
+		type.set ("assets/images/map/MapFull.png", AssetType.IMAGE);
 		
-		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
-		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		className.set ("assets/images/map/MapOnlyBuildings.png", __ASSET__assets_images_map_maponlybuildings_png);
+		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/WorldMap-Neighborhood.png", __ASSET__assets_images_worldmap_neighborhood_png);
+		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
 		
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
@@ -823,11 +823,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
-@:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends null { }
 @:keep @:bind #if display private #end class __ASSET__assets_images_duck_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends null { }
-@:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_idlesomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_map_mapfull_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_map_maponlybuildings_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_worldmap_neighborhood_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -856,11 +856,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
-@:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}
 @:image("assets/images/duck.png") #if display private #end class __ASSET__assets_images_duck_png extends lime.graphics.Image {}
-@:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
-@:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
-@:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
+@:image("assets/images/IdleSomnia.png") #if display private #end class __ASSET__assets_images_idlesomnia_png extends lime.graphics.Image {}
+@:image("assets/images/map/MapFull.png") #if display private #end class __ASSET__assets_images_map_mapfull_png extends lime.graphics.Image {}
+@:image("assets/images/map/MapOnlyBuildings.png") #if display private #end class __ASSET__assets_images_map_maponlybuildings_png extends lime.graphics.Image {}
+@:image("assets/images/WorldMap-Neighborhood.png") #if display private #end class __ASSET__assets_images_worldmap_neighborhood_png extends lime.graphics.Image {}
 @:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.Bytes {}
 @:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.Bytes {}
 @:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}

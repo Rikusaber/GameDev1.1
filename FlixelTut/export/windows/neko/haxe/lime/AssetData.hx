@@ -16,20 +16,24 @@ class AssetData {
 		
 		if (!initialized) {
 			
-			path.set ("assets/data/MapTestCollision.tmx", "assets/data/MapTestCollision.tmx");
-			type.set ("assets/data/MapTestCollision.tmx", Reflect.field (AssetType, "text".toUpperCase ()));
-			path.set ("assets/font.ttf", "assets/font.ttf");
-			type.set ("assets/font.ttf", Reflect.field (AssetType, "font".toUpperCase ()));
 			path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
 			type.set ("assets/images/DownWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/duck.png", "assets/images/duck.png");
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
 			type.set ("assets/images/IdleSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/invi.png", "assets/images/invi.png");
-			type.set ("assets/images/invi.png", Reflect.field (AssetType, "image".toUpperCase ()));
-			path.set ("assets/images/map.png", "assets/images/map.png");
-			type.set ("assets/images/map.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/LeftWalkSomnia.png", "assets/images/LeftWalkSomnia.png");
+			type.set ("assets/images/LeftWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/map/MapFull.png", "assets/images/map/MapFull.png");
+			type.set ("assets/images/map/MapFull.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/map/MapOnlyBuildings.png", "assets/images/map/MapOnlyBuildings.png");
+			type.set ("assets/images/map/MapOnlyBuildings.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/RightWalkSomnia.png", "assets/images/RightWalkSomnia.png");
+			type.set ("assets/images/RightWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/Somnia.png", "assets/images/Somnia.png");
+			type.set ("assets/images/Somnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/UpWalkSomnia.png", "assets/images/UpWalkSomnia.png");
+			type.set ("assets/images/UpWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/WorldMap-Neighborhood.png", "assets/images/WorldMap-Neighborhood.png");
 			type.set ("assets/images/WorldMap-Neighborhood.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("flixel/sounds/beep.ogg", "flixel/sounds/beep.ogg");
