@@ -53,7 +53,7 @@ class PlayState extends FlxState
 		add(_player);
 		add(_boxColi);
 		
-		add(_DummyStarter2)
+		add(_DummyStarter2);
 
 		
 		super.create();
