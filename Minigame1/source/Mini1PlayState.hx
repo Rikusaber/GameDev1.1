@@ -15,33 +15,41 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 class Mini1PlayState extends FlxState
 {
 	var _player:PlayerMiniDodge;
-	//var _enemies:Enemy;
-	var _numEnemies:Int = 15;
+	var _numEnemies:Int = 5;
+	var _numBoosts:Int = 3;
 	var _score:FlxText;
 
 	//make a group of enemies
 	var _enemies = new FlxTypedGroup<Enemy>();
+	var _boosts = new FlxTypedGroup<Boosts>();
 	var score:Float = 0;
 	var courage:Float = 0;
 
 	//time limit
 	var countdown:Float = 90;
 
-
 	override public function create():Void
 	{
 		var bg:FlxSprite = new FlxSprite(0,0);
+		var health:FlxSprite = new FlxSprite(0,0);
+		health.loadGraphic("assets/images/health.png");
 		bg.loadGraphic("assets/images/mouthbg.png");
 		_player = new PlayerMiniDodge();
 		add(bg);
 		add(_player);
 		add(_enemies);
+		add(_boosts);
+		add(health);
 
 		for (i in 0..._numEnemies) 
 		{
 			spawnEnemy();
 		}
 
+		for (i in 0..._numBoosts) 
+		{
+			spawnBoosts();
+		}
 		_player.scale.set(.5, .5);
 
 		//keep track of score
@@ -55,10 +63,10 @@ class Mini1PlayState extends FlxState
 	override public function update(elapsed:Float):Void
 	{
 		FlxG.overlap(_player, _enemies, onCollision);
+		FlxG.overlap(_player, _boosts, onCollision2);
 		updateScore();
 
 		//add courage for time elapsed
-		countdown -= FlxG.elapsed;
 		endScene();
 		super.update(elapsed);
 	}
@@ -72,6 +80,15 @@ class Mini1PlayState extends FlxState
 		_enemies.add(enemy);
 	}
 
+	function spawnBoosts():Void
+	{
+		var boost:Boosts = new Boosts();
+		boost.x = FlxG.random.float(0.0, FlxG.width);
+		boost.y = 0;
+		boost.scale.set(FlxG.random.float(0.5, 0.8), FlxG.random.float(0.8,1));
+		_boosts.add(boost);
+	}
+
 	function onCollision(_player:FlxSprite, enemies:Enemy):Void
 	{
 		//if colliding and both exist 
@@ -82,11 +99,21 @@ class Mini1PlayState extends FlxState
 			if (score <= -20)
 			{
 				//return to hub
-				//FlxG.switchState(new MyState());
-				super.destroy();
+				FlxG.switchState(new EndScreen());
 			}
 		}
 	}
+
+	function onCollision2(_player:FlxSprite, boosts:Boosts):Void
+	{
+		//if colliding and both exist 
+		if (boosts.exists && _player.exists) 
+		{
+			boosts.kill(); //destroy teeth
+			score += 10;
+		}
+	}
+
 
 	function updateScore():Void
 	{
@@ -95,11 +122,11 @@ class Mini1PlayState extends FlxState
 
 	function endScene():Void
 	{
-		if (countdown == 0) 
+		countdown -= FlxG.elapsed;
+		if (countdown <= 0) 
 		{
 			//return to hub
-			//FlxG.switchState(new MyState());
-			super.destroy();
+			FlxG.switchState(new EndScreen());
 		}
 	}
 }

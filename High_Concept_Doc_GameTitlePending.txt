@@ -39,9 +39,21 @@ floors were a creature's gums and the ceilings were the roof of its mouth. Every
 were teeth of all shapes and sizes. 
  ----------------- first mini game -------------------
  ------- After dodging most of the teeth and ---------
- ------- gathering enough courage to let his ---------
- ------- tooth fall out, the minigame ends.-----------
+ ------- gathering enough courage/timer ends ---------
+ ------- the minigame ends and shows end screen ------
+ ------- show collected courage and return -----------
 
+After escaping the dentist's office, player character finds that a monster was waiting outside for
+him this whole time. Night falls and the monster chases the player into a corner next to a pond--the 
+only way to escape is to swim across. Luckily, the player character has a flashlight/miner's hat but can only
+see within a small radius. There is a boat/life buoy at the other end of the pond.
+ -------------- second mini game --------------------  
+ ---------- with a limited light source, ------------
+ ---------- make his way through the maze -----------
+ ---------- and collide with buoy and returns -------
+ ---------- to end screen showing collected items ---
+ ----------------- return to hub --------------------
+ 
 
 
 World Overview:
@@ -54,7 +66,7 @@ _______ is a child--no older than 15.
 
 Minigame Ideas:
 1)Fear of Growing Up (losing teeth, wiggly teeth)
-  mechanics: dodge falling teeth; left/right movement; pick up boosts, lose health if hit 
+  mechanics: dodge falling teeth; left/right movement; pick up boosts, lose health if hit/ TIME LIMIT
   aesthetics: dragon teeth, human teeth; dungeon music
   outcome: gain courage to move forward and essentially grow up
 
@@ -64,8 +76,10 @@ Minigame Ideas:
   outcome: gain courage to tackle difficult problems; combat exp, talking skills
 
 3)Fear of Being Alone in an Ocean or Big Pond (on a boat, in a storm, at night)
-  mechanics: get through (whether by swimming or rowing) a maze with a small light source that has a limited radius, reach the end to get out
-  aesthetics: small flashlight with light concentrated in center, then fades out with distance; at the end, grab a ring buoy to exit minigame and the ocean/pond
+  mechanics: get through (whether by swimming or rowing) a maze with a small light source that
+  has a limited radius, reach the end to get out
+  aesthetics: small flashlight with light concentrated in center, then fades out with distance; 
+  at the end, grab a ring buoy to exit minigame and the ocean/pond
   outcome: gain courage to overcome fear, dilligence to struggle through the maze
 
 
