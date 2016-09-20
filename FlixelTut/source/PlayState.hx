@@ -71,9 +71,6 @@ class PlayState extends FlxState
 			FlxG.switchState(new Mini2PlayState());
 		} 
 		
-		/*if (FlxG.keys.justPressed.SPACE){
-            FlxG.switchState(new Mini1PlayState());
-		} */
 		
 		
 	}
