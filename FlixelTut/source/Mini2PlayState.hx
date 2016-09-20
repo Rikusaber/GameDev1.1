@@ -30,17 +30,20 @@ class Mini2PlayState extends FlxState
 		_boxColi = new BoxCollider(_player.x + _player.width / 2, _player.y + _player.height + 100);
 		
 		_BlackCover = new VisibilityOverlay(_player.x, _player.y);
-		_BlackCover.scale.set(2, 2);
+		_player.screenCenter();
+		_BlackCover.screenCenter();
 		
 		_winThing = new DummyMiniStarter(0, 0);
 		_winThing.screenCenter();
 		_winThing.y = 0;
 		
 		add(_player);
+
 		add(_boxColi);
 		add(_winThing);
 		
 		add(_BlackCover);
+
 		_player.scale.set(.5, .5);
 
 

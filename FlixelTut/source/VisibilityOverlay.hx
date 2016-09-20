@@ -22,10 +22,11 @@ package;
 	 
 	 
 	 var _score:Float = 0; //Variable to keep track of the score the player accumulates
-     public function new(?X:Float=0, ?Y:Float=0)
+    
+	 public function new(?X:Float=0, ?Y:Float=0)
      {
          super(X, Y);
-		 loadGraphic("assets/images/Flashlight.png", true, 96, 96);
+		 loadGraphic("assets/images/Flashlight.png", true, 800, 800);
 		 
 		 drag.x = drag.y = 1600;
      }
@@ -75,13 +76,7 @@ package;
 			velocity.set(speed, 0);
 			velocity.rotate(new FlxPoint(0, 0), _rot);
 		 }
-		 if (velocity.x != 0 || velocity.y != 0){
-			animation.play("walk");
-		 }
-		 else {
-			
-			animation.play("idle");
-		 }
+		 
 		 
 		// velocity.set(100, 0);
 		//velocity.set(speed, 0);
