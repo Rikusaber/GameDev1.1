@@ -60,7 +60,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		Font.registerFont (__ASSET__assets_font_ttf);
+		
+		
 		
 		
 		
@@ -92,6 +95,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -621,7 +627,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_font_ttf);
+		
+		
 		
 		
 		
@@ -653,6 +662,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		path.set ("assets/data/help.oel", "assets/data/help.oel");
+		type.set ("assets/data/help.oel", AssetType.TEXT);
 		path.set ("assets/data/MapTestCollision.tmx", "assets/data/MapTestCollision.tmx");
 		type.set ("assets/data/MapTestCollision.tmx", AssetType.TEXT);
 		path.set ("assets/data/Test Level.oel", "assets/data/Test Level.oel");
@@ -665,10 +676,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/font.ttf", AssetType.FONT);
 		path.set ("assets/images/badtooth.png", "assets/images/badtooth.png");
 		type.set ("assets/images/badtooth.png", AssetType.IMAGE);
+		path.set ("assets/images/Copy.png", "assets/images/Copy.png");
+		type.set ("assets/images/Copy.png", AssetType.IMAGE);
 		path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
 		type.set ("assets/images/DownWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/duck.png", "assets/images/duck.png");
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
+		path.set ("assets/images/Flashlight.png", "assets/images/Flashlight.png");
+		type.set ("assets/images/Flashlight.png", AssetType.IMAGE);
 		path.set ("assets/images/health.png", "assets/images/health.png");
 		type.set ("assets/images/health.png", AssetType.IMAGE);
 		path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");
@@ -720,6 +735,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/data/help.oel";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/data/MapTestCollision.tmx";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -738,10 +756,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/badtooth.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Copy.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/DownWalkSomnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/duck.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Flashlight.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/health.png";
@@ -839,9 +863,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
+		useManifest = true;
 		
 		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
 		type.set ("assets/font.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1622,6 +1649,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1635,7 +1665,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
 @:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { super (); name = "Visitor TT1 BRK"; } } 
+
+
 
 
 

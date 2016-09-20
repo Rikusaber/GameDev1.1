@@ -17,8 +17,6 @@
  	 var _left:Bool = false;
  	 var _right:Bool = false;
    var player_health:Float = 0;
-   var courage:Int = 0;
-
    var _score:Float = 0;
 
      public function new(?X:Float=0, ?Y:Float=0) //optional,if not supplied=0
@@ -32,7 +30,8 @@
        
       loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
       animation.add("idle", [0, 1, 2, 3, 4], 5, true);
-       
+      loadGraphic("assets/images/UpWalkSomnia.png", true, 96, 96);
+      animation.add("uwalk", [0, 1, 0, 2], 5, true);
       drag.x = drag.y = 1600;
     }
 
@@ -75,7 +74,7 @@
         
         if (velocity.x != 0 || velocity.y != 0) 
         {
-             animation.play("walk");
+             animation.play("uwalk");
         }
         else animation.play("idle");
    }

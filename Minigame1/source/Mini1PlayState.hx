@@ -15,21 +15,25 @@ import flixel.system.FlxAssets.FlxGraphicAsset;
 class Mini1PlayState extends FlxState
 {
 	var _player:PlayerMiniDodge;
-	var _numEnemies:Int = 5;
-	var _numBoosts:Int = 3;
+	var _numEnemies:Int = 20;
+	var _numBoosts:Int = 12;
 	var _score:FlxText;
+
+	//keep track of courage and stuff
+	static public var courage:Float = 0.0;
+    static public var maxCourage:Float = 0.0;
 
 	//make a group of enemies
 	var _enemies = new FlxTypedGroup<Enemy>();
 	var _boosts = new FlxTypedGroup<Boosts>();
 	var score:Float = 0;
-	var courage:Float = 0;
 
 	//time limit
 	var countdown:Float = 90;
 
 	override public function create():Void
 	{
+		maxCourage +=  _numBoosts;
 		var bg:FlxSprite = new FlxSprite(0,0);
 		var health:FlxSprite = new FlxSprite(0,0);
 		health.loadGraphic("assets/images/health.png");
@@ -41,15 +45,16 @@ class Mini1PlayState extends FlxState
 		add(_boosts);
 		add(health);
 
-		for (i in 0..._numEnemies) 
+		for (i in 0...4) 
 		{
 			spawnEnemy();
 		}
 
-		for (i in 0..._numBoosts) 
+		for (i in 0...3) 
 		{
 			spawnBoosts();
 		}
+		
 		_player.scale.set(.5, .5);
 
 		//keep track of score
@@ -62,12 +67,19 @@ class Mini1PlayState extends FlxState
 
 	override public function update(elapsed:Float):Void
 	{
+		countdown -= FlxG.elapsed;
+		//spawn more enemies
+		if (_boosts.countLiving() == 0) 
+		{
+			contSpawn();
+		}
+
+		endScene();
 		FlxG.overlap(_player, _enemies, onCollision);
 		FlxG.overlap(_player, _boosts, onCollision2);
 		updateScore();
 
-		//add courage for time elapsed
-		endScene();
+
 		super.update(elapsed);
 	}
 
@@ -89,6 +101,21 @@ class Mini1PlayState extends FlxState
 		_boosts.add(boost);
 	}
 
+	function contSpawn():Void
+	{
+		//if total spawned is not 32
+		if ( (_boosts.countDead() + _enemies.countDead() != (_numEnemies + _numBoosts)) )
+		{
+			for (i in 0...4)
+			{
+				spawnEnemy();
+			}
+			for (i in 0...3)
+			{
+				spawnBoosts();
+			}
+		}
+	}
 	function onCollision(_player:FlxSprite, enemies:Enemy):Void
 	{
 		//if colliding and both exist 
@@ -96,9 +123,12 @@ class Mini1PlayState extends FlxState
 		{
 			enemies.kill(); //destroy enemy
 			score -= 10;
+			courage -= 1;
 			if (score <= -20)
 			{
 				//return to hub
+				//maxCourage +=  _numBoosts + countdown;
+				//courage += countdown;
 				FlxG.switchState(new EndScreen());
 			}
 		}
@@ -111,6 +141,7 @@ class Mini1PlayState extends FlxState
 		{
 			boosts.kill(); //destroy teeth
 			score += 10;
+			courage += 1;
 		}
 	}
 
@@ -122,10 +153,12 @@ class Mini1PlayState extends FlxState
 
 	function endScene():Void
 	{
-		countdown -= FlxG.elapsed;
+		
 		if (countdown <= 0) 
 		{
 			//return to hub
+			//maxCourage +=  _numBoosts + countdown;
+			//courage += countdown;
 			FlxG.switchState(new EndScreen());
 		}
 	}

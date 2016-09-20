@@ -25,7 +25,7 @@ package;
      public function new(?X:Float=0, ?Y:Float=0)
      {
          super(X, Y);
-		 makeGraphic(10, 10, FlxColor.BLACK);
+		 loadGraphic("assets/images/Flashlight.png", true, 96, 96);
 		 
 		 drag.x = drag.y = 1600;
      }

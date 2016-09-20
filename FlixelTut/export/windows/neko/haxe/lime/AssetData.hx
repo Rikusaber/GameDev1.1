@@ -16,6 +16,8 @@ class AssetData {
 		
 		if (!initialized) {
 			
+			path.set ("assets/data/help.oel", "assets/data/help.oel");
+			type.set ("assets/data/help.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/data/MapTestCollision.tmx", "assets/data/MapTestCollision.tmx");
 			type.set ("assets/data/MapTestCollision.tmx", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/data/Test Level.oel", "assets/data/Test Level.oel");
@@ -28,10 +30,14 @@ class AssetData {
 			type.set ("assets/font.ttf", Reflect.field (AssetType, "font".toUpperCase ()));
 			path.set ("assets/images/badtooth.png", "assets/images/badtooth.png");
 			type.set ("assets/images/badtooth.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/Copy.png", "assets/images/Copy.png");
+			type.set ("assets/images/Copy.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
 			type.set ("assets/images/DownWalkSomnia.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/duck.png", "assets/images/duck.png");
 			type.set ("assets/images/duck.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/Flashlight.png", "assets/images/Flashlight.png");
+			type.set ("assets/images/Flashlight.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/health.png", "assets/images/health.png");
 			type.set ("assets/images/health.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/IdleSomnia.png", "assets/images/IdleSomnia.png");

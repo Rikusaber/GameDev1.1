@@ -25,20 +25,19 @@ class TileTest extends FlxState
 	{
 
 		//LOAD OGMO MAP
-		 add(bg);
 		 _map = new FlxOgmoLoader(AssetPaths.help__oel);
-		 _mWalls = _map.loadTilemap(AssetPaths.tile__png, 16, 16, "walls");
+		 _mWalls = _map.loadTilemap(AssetPaths.Copy__png, 16, 16, "walls");
 		 _mWalls.follow();
-		 _mWalls.setTileProperties(0, FlxObject.NONE);
-		 _mWalls.setTileProperties(1, FlxObject.ANY);
+		 _mWalls.setTileProperties(1, FlxObject.NONE);
+		 _mWalls.setTileProperties(0, FlxObject.ANY);
 		 add(_mWalls);
 
 		_player = new Player();
 		_map.loadEntities(placeEntities, "entities");
 		
-
+		add(bg);
 		add(_player);
-		_player.scale.set(.5, .5);
+		_player.scale.set(.2, .2);
 		super.create();
 		FlxG.camera.follow(_player, TOPDOWN, 1);
 	}
