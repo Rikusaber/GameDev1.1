@@ -23,7 +23,7 @@ class Mini2PlayState extends FlxState
 		
 		_boxColi = new BoxCollider(_player.x + _player.width / 2, _player.y + _player.height + 100);
 		
-		_winThing = new DummyMiniStarter(FlxG.width / 2, 0);
+		_winThing = new DummyMiniStarter(0, 0);
 		_winThing.screenCenter();
 		_winThing.y = 0;
 		
