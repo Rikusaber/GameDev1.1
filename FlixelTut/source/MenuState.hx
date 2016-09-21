@@ -8,6 +8,8 @@ import flixel.ui.FlxButton;
 import flixel.math.FlxMath;
 import flixel.tile.FlxTilemap;
 
+import flash.system.System;
+
 class MenuState extends FlxState
 {
 	
@@ -16,6 +18,13 @@ class MenuState extends FlxState
 	var _playButton3:FlxButton;
 	override public function create():Void
 	{
+		
+		if (FlxG.sound.music == null) // don't restart the music if it's alredy playing
+		{
+			
+			FlxG.sound.playMusic(AssetPaths.ES_AStrangeDream__ogg, 1, true);
+			
+		}
 		//add(new FlxText(10,10,100,"Hello, world!"));
 		_playButton = new FlxButton(0, 0, "Play", clickPlay);
 		_playButton.screenCenter();

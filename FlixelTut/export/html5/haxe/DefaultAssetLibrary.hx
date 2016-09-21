@@ -56,6 +56,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__assets_font_ttf);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
@@ -66,16 +92,68 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#if flash
 		
+		className.set ("assets/data/help.oel", __ASSET__assets_data_help_oel);
+		type.set ("assets/data/help.oel", AssetType.TEXT);
+		className.set ("assets/data/MapTestCollision.tmx", __ASSET__assets_data_maptestcollision_tmx);
+		type.set ("assets/data/MapTestCollision.tmx", AssetType.TEXT);
+		className.set ("assets/data/Test Level.oel", __ASSET__assets_data_test_level_oel);
+		type.set ("assets/data/Test Level.oel", AssetType.TEXT);
+		className.set ("assets/data/Testing Map.oep", __ASSET__assets_data_testing_map_oep);
+		type.set ("assets/data/Testing Map.oep", AssetType.TEXT);
+		className.set ("assets/data/TileMap.oep", __ASSET__assets_data_tilemap_oep);
+		type.set ("assets/data/TileMap.oep", AssetType.TEXT);
+		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
+		type.set ("assets/font.ttf", AssetType.FONT);
+		className.set ("assets/images/badtooth.png", __ASSET__assets_images_badtooth_png);
+		type.set ("assets/images/badtooth.png", AssetType.IMAGE);
+		className.set ("assets/images/cavetile.png", __ASSET__assets_images_cavetile_png);
+		type.set ("assets/images/cavetile.png", AssetType.IMAGE);
+		className.set ("assets/images/Copy.png", __ASSET__assets_images_copy_png);
+		type.set ("assets/images/Copy.png", AssetType.IMAGE);
+		className.set ("assets/images/DownWalkSomnia.png", __ASSET__assets_images_downwalksomnia_png);
+		type.set ("assets/images/DownWalkSomnia.png", AssetType.IMAGE);
 		className.set ("assets/images/duck.png", __ASSET__assets_images_duck_png);
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
+		className.set ("assets/images/Flashlight.png", __ASSET__assets_images_flashlight_png);
+		type.set ("assets/images/Flashlight.png", AssetType.IMAGE);
+		className.set ("assets/images/health.png", __ASSET__assets_images_health_png);
+		type.set ("assets/images/health.png", AssetType.IMAGE);
 		className.set ("assets/images/IdleSomnia.png", __ASSET__assets_images_idlesomnia_png);
 		type.set ("assets/images/IdleSomnia.png", AssetType.IMAGE);
+		className.set ("assets/images/invi.png", __ASSET__assets_images_invi_png);
+		type.set ("assets/images/invi.png", AssetType.IMAGE);
+		className.set ("assets/images/LeftWalkSomnia.png", __ASSET__assets_images_leftwalksomnia_png);
+		type.set ("assets/images/LeftWalkSomnia.png", AssetType.IMAGE);
 		className.set ("assets/images/map/MapFull.png", __ASSET__assets_images_map_mapfull_png);
 		type.set ("assets/images/map/MapFull.png", AssetType.IMAGE);
 		className.set ("assets/images/map/MapOnlyBuildings.png", __ASSET__assets_images_map_maponlybuildings_png);
 		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
+		className.set ("assets/images/map.png", __ASSET__assets_images_map_png);
+		type.set ("assets/images/map.png", AssetType.IMAGE);
+		className.set ("assets/images/mouthbg.png", __ASSET__assets_images_mouthbg_png);
+		type.set ("assets/images/mouthbg.png", AssetType.IMAGE);
+		className.set ("assets/images/RightWalkSomnia.png", __ASSET__assets_images_rightwalksomnia_png);
+		type.set ("assets/images/RightWalkSomnia.png", AssetType.IMAGE);
+		className.set ("assets/images/Somnia.png", __ASSET__assets_images_somnia_png);
+		type.set ("assets/images/Somnia.png", AssetType.IMAGE);
+		className.set ("assets/images/tile2.png", __ASSET__assets_images_tile2_png);
+		type.set ("assets/images/tile2.png", AssetType.IMAGE);
+		className.set ("assets/images/tile3.png", __ASSET__assets_images_tile3_png);
+		type.set ("assets/images/tile3.png", AssetType.IMAGE);
+		className.set ("assets/images/tooth.png", __ASSET__assets_images_tooth_png);
+		type.set ("assets/images/tooth.png", AssetType.IMAGE);
+		className.set ("assets/images/tooth2.png", __ASSET__assets_images_tooth2_png);
+		type.set ("assets/images/tooth2.png", AssetType.IMAGE);
+		className.set ("assets/images/UpWalkSomnia.png", __ASSET__assets_images_upwalksomnia_png);
+		type.set ("assets/images/UpWalkSomnia.png", AssetType.IMAGE);
 		className.set ("assets/images/WorldMap-Neighborhood.png", __ASSET__assets_images_worldmap_neighborhood_png);
 		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
+		className.set ("assets/images/WorldMap-Neighborhood2.png", __ASSET__assets_images_worldmap_neighborhood2_png);
+		type.set ("assets/images/WorldMap-Neighborhood2.png", AssetType.IMAGE);
+		className.set ("assets/sound/ES_AStrangeDream.mp3", __ASSET__assets_sound_es_astrangedream_mp3);
+		type.set ("assets/sound/ES_AStrangeDream.mp3", AssetType.MUSIC);
+		className.set ("assets/sound/ES_AStrangeDream.ogg", __ASSET__assets_sound_es_astrangedream_ogg);
+		type.set ("assets/sound/ES_AStrangeDream.ogg", AssetType.MUSIC);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -91,11 +169,67 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
+		id = "assets/data/help.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/MapTestCollision.tmx";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Test Level.oel";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/Testing Map.oep";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/data/TileMap.oep";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/font.ttf";
+		className.set (id, __ASSET__assets_font_ttf);
+		
+		type.set (id, AssetType.FONT);
+		id = "assets/images/badtooth.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/cavetile.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Copy.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/DownWalkSomnia.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/duck.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Flashlight.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/health.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/IdleSomnia.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/invi.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/LeftWalkSomnia.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -107,10 +241,58 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/map.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/mouthbg.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/RightWalkSomnia.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/Somnia.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tile2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tile3.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tooth.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/tooth2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/UpWalkSomnia.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/WorldMap-Neighborhood.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/WorldMap-Neighborhood2.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/sound/ES_AStrangeDream.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sound/ES_AStrangeDream.ogg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
@@ -149,11 +331,53 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var useManifest = false;
 		
+		className.set ("assets/data/help.oel", __ASSET__assets_data_help_oel);
+		type.set ("assets/data/help.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/MapTestCollision.tmx", __ASSET__assets_data_maptestcollision_tmx);
+		type.set ("assets/data/MapTestCollision.tmx", AssetType.TEXT);
+		
+		className.set ("assets/data/Test Level.oel", __ASSET__assets_data_test_level_oel);
+		type.set ("assets/data/Test Level.oel", AssetType.TEXT);
+		
+		className.set ("assets/data/Testing Map.oep", __ASSET__assets_data_testing_map_oep);
+		type.set ("assets/data/Testing Map.oep", AssetType.TEXT);
+		
+		className.set ("assets/data/TileMap.oep", __ASSET__assets_data_tilemap_oep);
+		type.set ("assets/data/TileMap.oep", AssetType.TEXT);
+		
+		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
+		type.set ("assets/font.ttf", AssetType.FONT);
+		
+		className.set ("assets/images/badtooth.png", __ASSET__assets_images_badtooth_png);
+		type.set ("assets/images/badtooth.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/cavetile.png", __ASSET__assets_images_cavetile_png);
+		type.set ("assets/images/cavetile.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Copy.png", __ASSET__assets_images_copy_png);
+		type.set ("assets/images/Copy.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/DownWalkSomnia.png", __ASSET__assets_images_downwalksomnia_png);
+		type.set ("assets/images/DownWalkSomnia.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/duck.png", __ASSET__assets_images_duck_png);
 		type.set ("assets/images/duck.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/Flashlight.png", __ASSET__assets_images_flashlight_png);
+		type.set ("assets/images/Flashlight.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/health.png", __ASSET__assets_images_health_png);
+		type.set ("assets/images/health.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/IdleSomnia.png", __ASSET__assets_images_idlesomnia_png);
 		type.set ("assets/images/IdleSomnia.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/invi.png", __ASSET__assets_images_invi_png);
+		type.set ("assets/images/invi.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/LeftWalkSomnia.png", __ASSET__assets_images_leftwalksomnia_png);
+		type.set ("assets/images/LeftWalkSomnia.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/map/MapFull.png", __ASSET__assets_images_map_mapfull_png);
 		type.set ("assets/images/map/MapFull.png", AssetType.IMAGE);
@@ -161,8 +385,44 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/images/map/MapOnlyBuildings.png", __ASSET__assets_images_map_maponlybuildings_png);
 		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
 		
+		className.set ("assets/images/map.png", __ASSET__assets_images_map_png);
+		type.set ("assets/images/map.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/mouthbg.png", __ASSET__assets_images_mouthbg_png);
+		type.set ("assets/images/mouthbg.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/RightWalkSomnia.png", __ASSET__assets_images_rightwalksomnia_png);
+		type.set ("assets/images/RightWalkSomnia.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/Somnia.png", __ASSET__assets_images_somnia_png);
+		type.set ("assets/images/Somnia.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tile2.png", __ASSET__assets_images_tile2_png);
+		type.set ("assets/images/tile2.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tile3.png", __ASSET__assets_images_tile3_png);
+		type.set ("assets/images/tile3.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tooth.png", __ASSET__assets_images_tooth_png);
+		type.set ("assets/images/tooth.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/tooth2.png", __ASSET__assets_images_tooth2_png);
+		type.set ("assets/images/tooth2.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/UpWalkSomnia.png", __ASSET__assets_images_upwalksomnia_png);
+		type.set ("assets/images/UpWalkSomnia.png", AssetType.IMAGE);
+		
 		className.set ("assets/images/WorldMap-Neighborhood.png", __ASSET__assets_images_worldmap_neighborhood_png);
 		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/WorldMap-Neighborhood2.png", __ASSET__assets_images_worldmap_neighborhood2_png);
+		type.set ("assets/images/WorldMap-Neighborhood2.png", AssetType.IMAGE);
+		
+		className.set ("assets/sound/ES_AStrangeDream.mp3", __ASSET__assets_sound_es_astrangedream_mp3);
+		type.set ("assets/sound/ES_AStrangeDream.mp3", AssetType.MUSIC);
+		
+		className.set ("assets/sound/ES_AStrangeDream.ogg", __ASSET__assets_sound_es_astrangedream_ogg);
+		type.set ("assets/sound/ES_AStrangeDream.ogg", AssetType.MUSIC);
 		
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
@@ -823,11 +1083,37 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
+@:keep @:bind #if display private #end class __ASSET__assets_data_help_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_maptestcollision_tmx extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_test_level_oel extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_testing_map_oep extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_data_tilemap_oep extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_font_ttf extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_images_badtooth_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_cavetile_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_copy_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_downwalksomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_duck_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_flashlight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_health_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_idlesomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_invi_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_leftwalksomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_map_mapfull_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_map_maponlybuildings_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_map_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_mouthbg_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_rightwalksomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_somnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tile2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tile3_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tooth_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_tooth2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_upwalksomnia_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_worldmap_neighborhood_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_worldmap_neighborhood2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_sound_es_astrangedream_mp3 extends null { }
+@:keep @:bind #if display private #end class __ASSET__assets_sound_es_astrangedream_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -836,6 +1122,32 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { super (); name = "Visitor TT1 BRK"; } } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -856,16 +1168,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
+@:file("assets/data/help.oel") #if display private #end class __ASSET__assets_data_help_oel extends lime.utils.Bytes {}
+@:file("assets/data/MapTestCollision.tmx") #if display private #end class __ASSET__assets_data_maptestcollision_tmx extends lime.utils.Bytes {}
+@:file("assets/data/Test Level.oel") #if display private #end class __ASSET__assets_data_test_level_oel extends lime.utils.Bytes {}
+@:file("assets/data/Testing Map.oep") #if display private #end class __ASSET__assets_data_testing_map_oep extends lime.utils.Bytes {}
+@:file("assets/data/TileMap.oep") #if display private #end class __ASSET__assets_data_tilemap_oep extends lime.utils.Bytes {}
+@:font("assets/font.ttf") #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font {}
+@:image("assets/images/badtooth.png") #if display private #end class __ASSET__assets_images_badtooth_png extends lime.graphics.Image {}
+@:image("assets/images/cavetile.png") #if display private #end class __ASSET__assets_images_cavetile_png extends lime.graphics.Image {}
+@:image("assets/images/Copy.png") #if display private #end class __ASSET__assets_images_copy_png extends lime.graphics.Image {}
+@:image("assets/images/DownWalkSomnia.png") #if display private #end class __ASSET__assets_images_downwalksomnia_png extends lime.graphics.Image {}
 @:image("assets/images/duck.png") #if display private #end class __ASSET__assets_images_duck_png extends lime.graphics.Image {}
+@:image("assets/images/Flashlight.png") #if display private #end class __ASSET__assets_images_flashlight_png extends lime.graphics.Image {}
+@:image("assets/images/health.png") #if display private #end class __ASSET__assets_images_health_png extends lime.graphics.Image {}
 @:image("assets/images/IdleSomnia.png") #if display private #end class __ASSET__assets_images_idlesomnia_png extends lime.graphics.Image {}
+@:image("assets/images/invi.png") #if display private #end class __ASSET__assets_images_invi_png extends lime.graphics.Image {}
+@:image("assets/images/LeftWalkSomnia.png") #if display private #end class __ASSET__assets_images_leftwalksomnia_png extends lime.graphics.Image {}
 @:image("assets/images/map/MapFull.png") #if display private #end class __ASSET__assets_images_map_mapfull_png extends lime.graphics.Image {}
 @:image("assets/images/map/MapOnlyBuildings.png") #if display private #end class __ASSET__assets_images_map_maponlybuildings_png extends lime.graphics.Image {}
+@:image("assets/images/map.png") #if display private #end class __ASSET__assets_images_map_png extends lime.graphics.Image {}
+@:image("assets/images/mouthbg.png") #if display private #end class __ASSET__assets_images_mouthbg_png extends lime.graphics.Image {}
+@:image("assets/images/RightWalkSomnia.png") #if display private #end class __ASSET__assets_images_rightwalksomnia_png extends lime.graphics.Image {}
+@:image("assets/images/Somnia.png") #if display private #end class __ASSET__assets_images_somnia_png extends lime.graphics.Image {}
+@:image("assets/images/tile2.png") #if display private #end class __ASSET__assets_images_tile2_png extends lime.graphics.Image {}
+@:image("assets/images/tile3.png") #if display private #end class __ASSET__assets_images_tile3_png extends lime.graphics.Image {}
+@:image("assets/images/tooth.png") #if display private #end class __ASSET__assets_images_tooth_png extends lime.graphics.Image {}
+@:image("assets/images/tooth2.png") #if display private #end class __ASSET__assets_images_tooth2_png extends lime.graphics.Image {}
+@:image("assets/images/UpWalkSomnia.png") #if display private #end class __ASSET__assets_images_upwalksomnia_png extends lime.graphics.Image {}
 @:image("assets/images/WorldMap-Neighborhood.png") #if display private #end class __ASSET__assets_images_worldmap_neighborhood_png extends lime.graphics.Image {}
-@:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.Bytes {}
-@:file("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.Bytes {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
-@:font("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
-@:image("C:/Users/huange2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
+@:image("assets/images/WorldMap-Neighborhood2.png") #if display private #end class __ASSET__assets_images_worldmap_neighborhood2_png extends lime.graphics.Image {}
+@:file("assets/sound/ES_AStrangeDream.mp3") #if display private #end class __ASSET__assets_sound_es_astrangedream_mp3 extends lime.utils.Bytes {}
+@:file("assets/sound/ES_AStrangeDream.ogg") #if display private #end class __ASSET__assets_sound_es_astrangedream_ogg extends lime.utils.Bytes {}
+@:file("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/beep.ogg") #if display private #end class __ASSET__flixel_sounds_beep_ogg extends lime.utils.Bytes {}
+@:file("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/sounds/flixel.ogg") #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends lime.utils.Bytes {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/nokiafc22.ttf") #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends lime.text.Font {}
+@:font("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/fonts/monsterrat.ttf") #if display private #end class __ASSET__flixel_fonts_monsterrat_ttf extends lime.text.Font {}
+@:image("C:/Users/ringk2/haxelib install openfl/flixel/4,1,1/assets/images/ui/button.png") #if display private #end class __ASSET__flixel_images_ui_button_png extends lime.graphics.Image {}
 
 
 
@@ -873,6 +1211,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__assets_font_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__assets_font_ttf (); src = font.src; name = font.name; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_nokiafc22_ttf (); src = font.src; name = font.name; super (); }}
 @:keep #if display private #end class __ASSET__OPENFL__flixel_fonts_monsterrat_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__flixel_fonts_monsterrat_ttf (); src = font.src; name = font.name; super (); }}
 

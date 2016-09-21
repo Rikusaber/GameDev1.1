@@ -87,6 +87,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -95,6 +97,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -654,6 +658,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -676,6 +682,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/font.ttf", AssetType.FONT);
 		path.set ("assets/images/badtooth.png", "assets/images/badtooth.png");
 		type.set ("assets/images/badtooth.png", AssetType.IMAGE);
+		path.set ("assets/images/cavetile.png", "assets/images/cavetile.png");
+		type.set ("assets/images/cavetile.png", AssetType.IMAGE);
 		path.set ("assets/images/Copy.png", "assets/images/Copy.png");
 		type.set ("assets/images/Copy.png", AssetType.IMAGE);
 		path.set ("assets/images/DownWalkSomnia.png", "assets/images/DownWalkSomnia.png");
@@ -698,18 +706,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/map/MapOnlyBuildings.png", AssetType.IMAGE);
 		path.set ("assets/images/map.png", "assets/images/map.png");
 		type.set ("assets/images/map.png", AssetType.IMAGE);
-		path.set ("assets/images/MapTestCollision.tmx", "assets/images/MapTestCollision.tmx");
-		type.set ("assets/images/MapTestCollision.tmx", AssetType.TEXT);
 		path.set ("assets/images/mouthbg.png", "assets/images/mouthbg.png");
 		type.set ("assets/images/mouthbg.png", AssetType.IMAGE);
 		path.set ("assets/images/RightWalkSomnia.png", "assets/images/RightWalkSomnia.png");
 		type.set ("assets/images/RightWalkSomnia.png", AssetType.IMAGE);
 		path.set ("assets/images/Somnia.png", "assets/images/Somnia.png");
 		type.set ("assets/images/Somnia.png", AssetType.IMAGE);
-		path.set ("assets/images/tile.png", "assets/images/tile.png");
-		type.set ("assets/images/tile.png", AssetType.IMAGE);
 		path.set ("assets/images/tile2.png", "assets/images/tile2.png");
 		type.set ("assets/images/tile2.png", AssetType.IMAGE);
+		path.set ("assets/images/tile3.png", "assets/images/tile3.png");
+		type.set ("assets/images/tile3.png", AssetType.IMAGE);
 		path.set ("assets/images/tooth.png", "assets/images/tooth.png");
 		type.set ("assets/images/tooth.png", AssetType.IMAGE);
 		path.set ("assets/images/tooth2.png", "assets/images/tooth2.png");
@@ -720,6 +726,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/WorldMap-Neighborhood.png", AssetType.IMAGE);
 		path.set ("assets/images/WorldMap-Neighborhood2.png", "assets/images/WorldMap-Neighborhood2.png");
 		type.set ("assets/images/WorldMap-Neighborhood2.png", AssetType.IMAGE);
+		path.set ("assets/sound/ES_AStrangeDream.mp3", "assets/sound/ES_AStrangeDream.mp3");
+		type.set ("assets/sound/ES_AStrangeDream.mp3", AssetType.MUSIC);
+		path.set ("assets/sound/ES_AStrangeDream.ogg", "assets/sound/ES_AStrangeDream.ogg");
+		type.set ("assets/sound/ES_AStrangeDream.ogg", AssetType.MUSIC);
 		className.set ("flixel/sounds/beep.ogg", __ASSET__flixel_sounds_beep_ogg);
 		type.set ("flixel/sounds/beep.ogg", AssetType.SOUND);
 		className.set ("flixel/sounds/flixel.ogg", __ASSET__flixel_sounds_flixel_ogg);
@@ -756,6 +766,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/badtooth.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/images/cavetile.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Copy.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -789,9 +802,6 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/map.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/MapTestCollision.tmx";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
 		id = "assets/images/mouthbg.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -801,10 +811,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/Somnia.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/tile.png";
+		id = "assets/images/tile2.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "assets/images/tile2.png";
+		id = "assets/images/tile3.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/tooth.png";
@@ -822,6 +832,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/images/WorldMap-Neighborhood2.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/sound/ES_AStrangeDream.mp3";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
+		id = "assets/sound/ES_AStrangeDream.ogg";
+		path.set (id, id);
+		type.set (id, AssetType.MUSIC);
 		id = "flixel/sounds/beep.ogg";
 		path.set (id, id);
 		
@@ -867,6 +883,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/font.ttf", __ASSET__assets_font_ttf);
 		type.set ("assets/font.ttf", AssetType.FONT);
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1652,6 +1670,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1667,6 +1687,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__assets_font_ttf extends lime.text.Font { public function new () { super (); name = "Visitor TT1 BRK"; } } 
+
+
 
 
 

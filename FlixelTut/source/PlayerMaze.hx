@@ -23,18 +23,24 @@
      public function new(?X:Float=0, ?Y:Float=0, ?SimpleGraphic:FlxGraphicAsset)
      {
          super(X, Y, SimpleGraphic);
+
+		 
+		 loadGraphic("assets/images/Somnia.png", true, 96, 96);
 		 //makeGraphic(16, 16, FlxColor.GREEN);
-		 loadGraphic("assets/images/duck.png", true, 100, 114); //Asset name, Animated Bool, Width, Height
-		 //setFacingFlip(direction,flipx,flipy
-		 loadGraphic("assets/images/duck.png", true, 100, 114);
+		 //loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
 		 //setFacingFlip(direction,flipx,flipy)
 		 setFacingFlip(FlxObject.LEFT, true, false);
 		 setFacingFlip(FlxObject.RIGHT, false, false);
-		 animation.add("walk", [0, 1, 0, 2], 5, true);
+		 //animation.add("walk", [0, 1, 2, 3], 5, true);
+		 animation.add("idle", [0, 1, 2, 3, 4], 6, true);
 		 
-		 loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
-		 animation.add("idle", [0, 1, 2, 3, 4], 5, true);
-		 
+		 //loadGraphic("assets/images/DownWalkSomnia.png", true, 96, 96);
+		 animation.add("down", [5, 6, 7, 8], 6, true);
+		 //loadGraphic("assets/images/IdleSomnia.png", true, 96, 96);
+		 //animation.add("idle", [0, 1, 2, 3, 4], 5, true);
+		 animation.add("up", [10, 11, 12, 13], 6, true);
+		 animation.add("left", [15, 16, 17, 18], 6, true);
+		 animation.add("right", [20, 21, 22, 23], 6, true);
 		 
 		 drag.x = drag.y = 1600;
      }
@@ -42,7 +48,7 @@
 	 override public function update(elapsed:Float):Void
 	 {
 		 movement();
-		 bound();
+		// bound();
 		 
 		 super.update(elapsed);
 	 }
@@ -96,18 +102,18 @@
 		//velocity.set(speed, 0);
 	 }
 	 
-	 function bound():Void 
+	 /*function bound():Void 
 		{
 		 //bind the player from leaving the screen
 
-		 if ( x > FlxG.width ) //a little wonky, goes past the right edge in Minigame
+		 if ( x > 1028 ) //a little wonky, goes past the right edge in Minigame
 		 {
-			  setPosition(FlxG.width, y);
+			  setPosition(1028, y);
 		 }
 		 //right side of screen
 		 else if ( x < 0 )
 		 {
 			  setPosition(0, y);
 		 }
-		}
+		}*/
  }
