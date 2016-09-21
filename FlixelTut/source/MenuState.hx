@@ -12,11 +12,23 @@ class MenuState extends FlxState
 {
 	
 	var _playButton:FlxButton;
+	private var _bg:FlxSprite;
+	private var _title:FlxSprite;
 	override public function create():Void
 	{
 		//add(new FlxText(10,10,100,"Hello, world!"));
-		_playButton = new FlxButton(0, 0, "Play", clickPlay);
+		_bg = new FlxSprite(0, 0, "assets/images/Bedroom(Asleep).png");
+		_title = new FlxSprite(0, 0, "assets/images/Title.png");
+		_bg.screenCenter();
+		_bg.scale.set(1.2, 1.2);
+		add(_bg);
+		_title.screenCenter();
+		_title.scale.set(.5, .5);	
+		_title.y = _title.y - 200;
+		add(_title);
+		_playButton = new FlxButton(0, 0, "Wake Up", clickPlay);
 		_playButton.screenCenter();
+		_playButton.y = _playButton.y + 175;
 		add(_playButton);
 		super.create();
 		
